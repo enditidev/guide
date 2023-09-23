@@ -1,0 +1,70 @@
+ .slogan {
+    background-color: rgb(27, 233, 96);
+    padding: 13px; /* độ lớn nền slogan */
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+} 
+
+.slogan span {
+    color: white;
+    margin-left: 5px;
+}
+.slogan a {
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px; /* Move the icons to the left */
+}
+
+.slogan i {
+    color: white;
+    font-size: 28px;
+    margin-right: -10px;
+    float: left;
+}
+.slogan span:first-child {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.slogan span:nth-child(2),
+.slogan span:nth-child(3),
+.slogan span:nth-child(4) {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.slogan span:nth-child(2):hover {
+    transform: translateX(-5px);
+}
+
+.slogan span:nth-child(3):hover {
+    transform: translateX(-5px);
+}
+
+.slogan span:nth-child(4):hover {
+    transform: translateX(-5px);
+}
+
+.slogan span:nth-child(2) i {
+    color: purple;
+}
+
+.slogan span:nth-child(3) i {
+    color: blue;
+}
+
+.slogan span:nth-child(4) i {
+    color: green;
+}
+
+  .fixed-section {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    top: 0;
+    z-index: 1;
+  }

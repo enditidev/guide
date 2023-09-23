@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+.s129 {
+  /* min-height: 100vh; */
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  /* background-size: cover; */
+  background-position: center;
+  padding: 15px;
+  width: 50%; /*khoảng cách của thanh với lề */
+}
+
+.s129 form {
+  width: 80%;
+  max-width: 390px;
+  background-color: pink;
+}
+
+.s129 form .inner-form {
+  width: 70%;
+}
+
+.s129 form .inner-form .input-field {
+  height: 80px;
+  width: 80%;
+  position: relative;
+}
+
+.s129 form .inner-form .input-field input {
+  /* height: 100%; */
+  /* border-bottom: 2px solid black; */
+  /* padding: 10px 32px 10px 70px; */
+  height: 40px;
+  width: 500px;
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 100px;
+  display: block;
+  color: black; 
+  transition: all .2s ease-out, color .2s ease-out;
+  margin-top: 10%;
+  padding-left: -100px;
+}
+
+.s129 form .inner-form .input-field input.placeholder {
+  color: black;
+  font-size: 18px;
+  background-color: fuchsia;
+}
+
+.s129 form .inner-form .input-field input:-moz-placeholder {
+  color: black;
+  font-size: 18px;
+  background-color: green;
+}
+
+.s129 form .inner-form .input-field input::-webkit-input-placeholder {
+  color: black;
+  font-size: 18px;
+  background-color: purple;
+  width: 80%;
+}
+
+.s129 form .inner-form .input-field input:hover, .s129 form .inner-form .input-field input:focus {
+  box-shadow: none;
+  outline: 0;
+  border-bottom-color: black;
+}
+
+.s129 form .inner-form .input-field .icon-button {
+  width: 50px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  /* left: 0; */
+  height: 100%;
+  background: transparent;
+  /* border: 0;
+  padding: 0; */
+  cursor: pointer;
+}
+
+.s129 form .inner-form .input-field .icon-button {
+  fill: black;
+  width: 50px;
+  height: 50px;
+}
+
+.s129 form .inner-form .input-field .icon-button:hover, .s129 form .inner-form .input-field .icon-button:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 767px) {
+  .s129 form .inner-form .input-field {
+    margin-bottom: 20px;
+    height: 50px;
+  }
+  .s129 form .inner-form .input-field input {
+    padding-left: 45px;
+    font-size: 16px;
+  }
+  .s129 form .inner-form .input-field .icon-button {
+    width: 36px;
+    height: 36px;
+  }
+}
+/* button */
+.icon-button {
+  border: none;
+  background: none;
+  padding: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s ease;
+  margin-top: 0%;
+}
+
+.icon-button i {
+  font-size: 20px;
+}
+
+.icon-button:active {
+  transform: scale(0.9);
+}
+/* End button */
+
+/* .show-results{
+  text-align: left;
+} */
+
+

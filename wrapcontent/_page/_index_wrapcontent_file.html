@@ -1,0 +1,391 @@
+<h3 id="building_list" class="h2red">2.1 Danh mục tòa nhà (Building List)</h3> 
+    <div><p>Khai báo các cụm tòa nhà hay resort trong khách sạn</p></div>
+    <div class="center"> <img class="image-border" src="./_page/image/bulding_list.png" alt="bulding_list" width="300" height="200" ></div>
+    <p onclick="toggleGuide('building-list-details', 'building-list-summary')">Nhấn vào để xem chi tiết</p>
+    <div id="building-list-details" style="display: none;">
+        <div class="align">
+            <table>
+                <tr><th style="text-align: center;">Building Id:</th><td style="background: #D0F8CC; text-align: center;">Mã tòa nhà.</td></tr>
+                <tr><th style="text-align: center;">Building Name:</th><td style="background: #D0F8CC; text-align: center;">Tên tòa nhà.</td></tr>
+                <tr><th style="text-align: center;">Export Excel</th><td style="background: #D0F8CC; text-align: center;">Xuất ra Excel</td></tr>
+                <tr><th style="text-align: center;">Exit Excel</th><td style="background: #D0F8CC; text-align: center;">Thoát</td></tr>
+            </table>
+        </div>
+    </div>
+
+<h3 id="floor_list" class="h2red">2.2 Danh mục tầng (floor List)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/floor_list.png" alt="floor_list" width="400" height="300"></div>
+
+<h3 id="direction_list" class="h2red">2.3 Danh mục hướng (Direction List)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/direction_list.png" alt="direction_list" width="400" height="300"></div>
+
+<h3 id="equipment_list" class="h2red">2.4 Danh mục thiết bị (Equipment List)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/equipment_list.png" alt="equipment_list" width="400" height="300"></div>
+
+<h3 id="room_type" class="h2red">2.5 Loại phòng (Room Type)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/room_type.png" alt="room_type" width="400" height="300"></div>
+
+<h3 id="room_list" class="h2red">2.6 Danh sách phòng (Room List)</h3>
+    <div><p>Các bước nhập danh sách: Chọn loại phòng ➔ Nhập các thông tin cần thiết ➔ Chọn thiết bị cho phòng ➔ Nhấn mũi tên qua phải để thêm thiết bị </p></div>
+    <div class="center"> <img class="image-border" src="./_page/image/room_list.png" alt="room_list" width="500" height="400"></div>
+    <p onclick="toggleGuide('room-list-details', 'room-list-summary')">Nhấn vào để xem chi tiết</p>
+    <div id="room-list-details" style="display: none;">
+        <div class="align">
+        <table>
+            <tr><th style="text-align: center;">Room Type:</th><td style="background: #D0F8CC; text-align: center;">Loại phòng.</td></tr>
+            <tr><th style="text-align: center;">Room No.</th><td style="background: #D0F8CC; text-align: center;">Số phòng.</td></tr>
+            <tr><th style="text-align: center;">Floor</th><td style="background: #D0F8CC; text-align: center;">Lầu</td></tr>
+            <tr><th style="text-align: center;">Direction</th><td style="background: #D0F8CC; text-align: center;">Hướng</td></tr>
+            <tr><th style="text-align: center;">No.OCC</th><td style="background: #D0F8CC; text-align: center;">Phòng không tính công suất</td></tr>
+            <tr><th style="text-align: center;">Equipment/Miscellaneous</th><td style="background: #D0F8CC; text-align: center;">Thiết bị</td></tr>
+        </table>
+        </div>
+    </div>
+    <span class="wrap-content-tab-padding" style="color:red;">Lưu ý:</span> Muốn xem tất cả loại phòng nhấn Room All  <img src="./_page/image/btn_roomall.png" alt="btn_roomall" width="70" height="40" >
+    
+
+<h3 id="conference_list" class="h2red">2.7 Danh mục hội nghị (Conference List)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/conference_list.png" alt="conference_list" width="400" height="300"></div>
+    <p onclick="toggleGuide('conference-list-details', 'conference-list-summary')">Nhấn vào để xem chi tiết</p>
+    <div id="conference-list-details" style="display: none;">
+        <div class="align">
+            <table>
+                <tr><th style="text-align: center;">Item Code:</th><td style="background: #D0F8CC; text-align: center;">Mã hội nghị.</td></tr>
+                <tr><th style="text-align: center;">Item Name:</th><td style="background: #D0F8CC; text-align: center;">Tên hội nghị.</td></tr>
+                <tr><th style="text-align: center;">Floor</th><td style="background: #D0F8CC; text-align: center;">Tầng</td></tr>
+                <tr><th style="text-align: center;">Export Excel:</th><td style="background: #D0F8CC; text-align: center;">Xuất Excel</td></tr>
+            </table>
+        </div>
+    </div>
+
+<h3 id="rate_room_type" class="h2red">2.8 Danh mục loại giá (Rate Room Type)</h3>
+    <div><p>Nhập các loại giá mà khách sạn muốn tính</p></div>
+    <div class="center"> <img class="image-border" src="./_page/image/rate_room_type.png" alt="rate_room_type" width="400" height="300"></div>
+ 
+<h3 id="room_rate_list" class="h2red">2.9 Danh mục giá phòng (Room rate list)</h3>
+    <span>
+        Thao tác tạo phòng này sẽ tạo và lưu lại chức năng của phòng, những lần tiếp theo sẽ không cần tạo lại nữa.
+    </span><br/>
+    <p class="wrap-content-p">
+            <span class="wrap-content-p-path wrap-content-tab-padding">Các bước thực hiện:</span><br />
+        <ul class="wrap-content-ul01">
+            <li class="wrap-content-tab-padding">
+                <span class="wrap-content-ul-title">(1)</span>: Trên màn hình chính chọn File ➔ Room rate list<br/>
+            </li></ul>
+                <div class="center"> <img class="image-border" id="iroomratelist class="h2red" src="./_page/image/room_rate_list.png" alt="room" width="600" height="500"></div>
+            <ul class="wrap-content-ul01"><li class="wrap-content-tab-padding">
+                <span class="wrap-content-ul-title">(2)</span>: Nhập các thông tin được đánh số (Nhấn vào xem chi tiết để giải thích cụ thể các thông tin)
+            </li>
+            <li class="wrap-content-tab-padding">
+                <span class="wrap-content-ul-title">(3)</span>: Sau khi nhập xong thông tin nhấp chuột qua dòng bất kì để tự động lưu dòng vừa nhập
+            </li>
+            <p onclick="toggleGuide('room-rate-list-details', 'room-rate-list-summary')">Nhấn vào để xem chi tiết</p>
+            <div id="room-rate-list-details" style="display: none;">
+                <div class="align">
+                    <table>
+                        <thead>
+                            <tr><th colspan="2" style="text-align: center;">Chú thích</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th style="text-align: center;"><b>ROOM TYPE</b></th><td style="background: #D0F8CC; text-align: center;">Loại phòng</td></tr>
+                            <tr><th style="text-align: center;"><b>RATE TYPE</b></th><td style="background: #D0F8CC; text-align: center;">Đơn vị tính tiền (ngày, tháng, dài hạn, lần)</td></tr>
+                            <tr><th style="text-align: center;"><b>RATE ID</b></th><td style="background: #D0F8CC; text-align: center;">Mã phòng</td></tr>
+                            <tr><th style="text-align: center;"><b>TYPE</b></th><td style="background: #D0F8CC; text-align: center;">Loại phòng (được lấy tự động từ <b>Rate Type</b></td></tr>
+                            <tr><th style="text-align: center;"><b>RATE</b></th><td style="background: #D0F8CC; text-align: center;">Giá</td></tr>
+                            <tr><th style="text-align: center;"><b>VAT/SC</b></th><td style="background: #D0F8CC; text-align: center;">Phòng đã bao gồm phí phục vụ </td></tr>
+                            <tr><th style="text-align: center;"><b>BREAKFAST</b></th><td style="background: #D0F8CC; text-align: center;">Phòng bao gồm bữa sáng</td></tr>
+                            <tr><th style="text-align: center;"><b>BFAST/CHILD</b></th><td style="background: #D0F8CC; text-align: center;">Ăn sáng xuất trẻ em</td></tr>
+                            <tr><th style="text-align: center;"><b>VAT</b></th><td style="background: #D0F8CC; text-align: center;">Thuế</td></tr>
+                            <tr><th style="text-align: center;"><b>S.C</b></th><td style="background: #D0F8CC; text-align: center;">Phí phục vụ (%)</td></tr>
+                            <tr><th style="text-align: center;"><b>ALLOW DUE</b></th><td style="background: #D0F8CC; text-align: center;">Cho phép chỉnh giá</td></tr>                            
+                            <tr><th style="text-align: center;"><b>HOUSE USE</b></th><td style="background: #D0F8CC; text-align: center;">Phòng sử dụng nội bộ</td></tr>
+                            <tr><th style="text-align: center;"><b>HIDDEN RECEPTION</b></th><td style="background: #D0F8CC; text-align: center;">Ẩn giá (ẩn khi không dùng giá này nữa)</td></tr>            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </ul>
+    </p>
+<h3 id="discount_list" class="h2red">2.10 Danh mục giảm giá (List of Discount)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/discount_list.png" alt="discount_list" width="400" height="500"></div>
+    <p onclick="toggleGuide('list-discount-details', 'list-discount-summary')">Nhấn vào để xem chi tiết</p>
+    <div id="list-discount-details" style="display: none;">
+        <div>
+            <ul>
+                <li><b>Authority Id:</b> Mã giảm giá.</li>
+                <li><b>Authority Name:</b> Tên giảm giá.</li>
+                <li><b>Percent:</b> Phần trăm</li>
+            </ul>
+        </div>
+    </div>
+
+<h3 id="service_group_list" class="h2red">2.11 Danh mục nhóm dịch vụ (Service Group List)</h3>
+    <div><p>Nhập các thông tin cần thiết</p></div>
+    <div class="center"> <img class="image-border" src="./_page/image/service_group_list.png" alt="service_group_list" width="550" height="400"></div>
+    <p onclick="toggleGuide('service-group-list-details', 'service-group-list-summary')">Nhấn vào để xem chi tiết</p>
+    <div id="service-group-list-details" style="display: none;">
+        <div>
+        <ul>
+            <li><b>ServiceID:</b> Mã nhóm dịch vụ.</li>
+            <li><b>ServiceName, Vietnamese:</b> Tên nhóm dịch vụ bằng tiếng Anh, tiếng Việt.</li>
+            <li><b>VAT(%):</b> Thuế giá trị gia tăng.</li>
+            <li><b>Service charge(%):</b> Phí phục vụ.</li>
+            <li><b>Tax-S(%):</b> Thuế tiêu thụ đặc biệt.</li>
+            <li><b>Room Charge:</b> Chỉ sử dụng khi nhóm dịch vụ này là tiền phòng.</li>
+            <li><b>Mibibar:</b> Chỉ sử dụng khi nhóm dịch vụ này là Minibar.</li>
+            <li><b>Type:</b> Doanh thu của nhóm dịch vụ này sẽ tính vào loại nào.</li>
+            <li><b>FO:</b> Front Office.</li>
+            <li><b>FB:</b> Food & Beverage.</li>
+            <li><b>ET:</b> Entertainment.</li>
+            <li><b>RC:</b> Room Chart.</li>
+            <li><b>Department:</b> Doanh thu của dịch vụ này sẽ trả về cho bộ phận nào.</li>
+            <li><b>Type:</b> “VND” hoặc “USD”.</li>
+            <li><b>Export Excel:</b> Nhấn Export Excel.</li>
+        </ul>
+        </div>
+    </div>
+
+<h3 id="service_group_detail" class="h2red">2.12 Danh mục các dịch vụ (Service Group Detail)</h3>
+    <p>
+        Chọn sheet <b>all</b> để xem tất cả các dich vụ<br/>
+    </p>
+    <div class="center"> 
+        <img style="max-width: 900px;" src="./_page/image/service_group_detail.png" alt="service_group_detail"  />
+    </div>
+    <p onclick="toggleGuide('service-group-detail-details', 'service-group-detail-summary')">Nhấn vào để xem chi tiết</p>
+    <div id="service-group-detail-details" style="display: none;">
+        <div>
+            <ul>
+                <li><b>Select Group:</b> Nhóm dịch vụ cần nhập.</li>
+                <li><b>ID:</b> Mã dịch vụ.</li>
+                <li><b>Service Name:</b> Tên dịch vụ.</li>
+                <li><b>Unit:</b> Đơn vị tính.</li>
+                <li><b>Rate:</b> Đơn giá.</li>
+                <li><b>Service Type:</b> Loại dịch vụ.</li>
+                <li><b>Hidden:</b> Ẩn dịch vụ.</li>
+            </ul>
+        </div>
+    </div>
+    <p>
+        <span style="color:red;">&#10148; thêm, sửa, xóa (ẩn) dịch vụ</span><br/>
+    </p>
+    <div class="center"> 
+        <img style="max-width: 900px;" src="./_page/image/add_change_delete_service_detail.png" alt="add_change_delete_service_detail"  />
+    </div>
+    <p class="wrap-content-p">
+        <span class="wrap-content-p-path wrap-content-tab-padding">Các bước thực hiện:</span><br />
+        <ul class="wrap-content-ul01">
+            <li class="wrap-content-tab-padding">
+                <span class="wrap-content-ul-title">(1)</span>: Chọn nhóm dịch vụ  
+            </li>
+            <li class="wrap-content-tab-padding">
+                <span class="wrap-content-ul-title">Thêm dịch vụ</span>: Nhập dòng cuối
+            </li>
+            <li class="wrap-content-tab-padding">
+                <span class="wrap-content-ul-title">Sửa dịch vụ</span>: Sửa trực tiếp trong dòng
+            </li>
+            <li class="wrap-content-tab-padding">
+                <span class="wrap-content-ul-title">Xóa (ẩn) dịch vụ</span>: nhấn nút <b>Hidden</b>
+            </li>
+            <li class="wrap-content-tab-padding">
+                <span class="wrap-content-ul-title">(2)</span>: Sau khi thao tác nhấn vào dòng khác để lưu
+            </li>
+        </ul>
+        <span class="wrap-content-tab-padding" style="color:red;">Lưu ý</span>: Ở chế độ xem tổng (Sheet All) thì không thể thao tác thêm, sửa, xóa
+    </p>
+
+
+
+<h3 id="user_group" class="h2red">2.13 Danh mục bộ phận (User Group)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/users_group.png" alt="user_group" with="400" height="300"></div>
+    <p onclick="toggleGuide('user-group-details', 'user-group-detail-summary')">Nhấn vào để xem chi tiết</p>
+    <div id="user-group-details" style="display: none;">
+        <div>
+            <ul>
+                <li><b>Group ID:</b> Mã bộ phận.</li>
+                <li><b>Group Name:</b> Tên bộ phận.</li>
+                <li><b>Notes:</b> Ghi chú.</li>
+            </ul>
+        </div>
+    </div>
+
+<h3 id="usesr_access" class="h2red">2.14 Danh mục người sử dụng (Users Access)</h3>
+    <div><p>Giao diện màn hình chính ➔ Chọn File ➔ Chọn <b>Users Access</b> </p>
+    </div>
+    <div class="center"> <img class="image-border" src="./_page/image/open_user_access.png" alt="open_user_access" width="500" height="400"></div>
+    <p>Chọn nhóm (1)  ➔ Tích vào các ô muốn chọn (2) ➔ Chọn <b>Permission</b> để xác nhận (3) </p>
+    <div class="center"> <img class="image-border" src="./_page/image/user_access.png" alt="user_access" width="500" height="400"></div>
+    <p onclick="toggleGuide('user-access-details', 'user-access-details-summary')">Nhấn vào để xem chi tiết các loại quyền</p>
+    <div id="user-access-details" style="display: none;">
+        <div>
+            <ul>
+                <li><b>Groups User:</b> Bộ phận.</li>
+                <li><b>User ID:</b> Mã người sử dụng.</li>
+                <li><b>User Name:</b> Tên người sử dụng.</li>
+                <li><b>Email:</b> Địa chỉ email của người sử dụng.</li>
+                <li><b>Group:</b> Thuộc nhóm.</li>
+                <li><b>Delete bill VAT:</b> Được phép xóa bill VAT.</li>
+                <li><b>Edit room rate:</b> Được phép thay đổi giá phòng.</li>
+                <li><b>Undo bill guest ledger(POS):</b> Có quyền gỡ bill đã chuyển lên phòng xuống.</li>
+                <li><b>R C/I:</b> Có quyền phục hồi lại hóa đơn phòng đã check-out.</li>
+                <li><b>Adjustment:</b> Có quyền điều chỉnh doanh thu qua ngày.</li>
+                <li><b>Undo room:</b> Có quyền trả lại trạng thái phòng chưa Check-In.</li>
+                <li><b>RA.ACC:</b> Có quyền xem giá phòng trên sơ đồ phòng.</li>
+                <li><b>Allow edit price(POS):</b> Có quyền chỉnh giá thực đơn khi bán.</li>
+                <li><b>Delete row printed(POS):</b> Có quyền xóa một dòng sau khi in.</li>
+                <li><b>Edit reservation(Y/N):</b> Có quyền điều chỉnh đặt phòng.</li>
+                <li><b>Show all log books:</b> Có quyền xem tất cả sổ nhật ký.</li>
+                <li><b>Hot-key:</b> Có quyền sử dụng phím tắt.</li>
+                <li><b>Remote Login:</b> Có quyền đăng nhập từ xa.</li>
+                <li><b>Edit all location pos:</b> Có quyền chỉnh sửa bill khi sử dụng máy tính khác.</li>
+                <li><b>Show room rate:</b> Có quyền xem giá phòng.</li>
+                <li><b>Show message all:</b> Có quyền xem tất cả tin nhắn.</li>
+                <li><b>Looked:</b> Khóa tài khoản của người sử dụng này.</li>
+                <li><b>Gross revenue V.A.T:</b> Có quyền xuất thêm tiền cho hóa đơn VAT.</li>
+                <li><b>Correction:</b> Có quyền điều chỉnh dịch vụ trong ngày.</li>
+                <li><b>Create master key:</b> Có quyền tạo bill master.</li>
+                <li><b>Export:</b> Có quyền kết xuất file.</li>
+                <li><b>Select day:</b> Có quyền chọn ngày.</li>
+                <li><b>Export folio:</b> Có quyền kết xuất file Guest Folio.</li>
+                <li><b>Post(-):</b> Có quyền post âm khi bán hàng.</li>
+                <li><b>To Pay:</b> Có quyền ghi nhận doanh thu.</li>
+                <li><b>Allowed Print After Pay:</b> Có quyền in lại Bill sau khi ghi nhận doanh thu.</li>
+                <li><b>Allowed Date Paid POS:</b> Có quyền chỉnh lại ngày ghi nhận doanh thu.</li>
+                <li><b>Allowed post V.I.P card manual:</b> Có quyền tạo thẻ V.I.P.</li>
+                <li><b>Allow Looked Room Assign:</b> Có quyền khóa phần khi đã được phân trước.</li>
+                <li><b>Allow edit header reservation:</b> Được điều chỉnh thông tin của đặt phòng.</li>
+                <li><b>Revenue Forecast(Y/N):</b> Xem doanh thu phòng trên màn hình Forecast.</li>
+                <li><b>Show all Bk sales:</b> Có quyền xem tất cả BK của mọi người(phần Sale).</li>
+                <li><b>KeyCard VC:</b> Có quyền làm thẻ mở phòng khi phòng không có khách.</li>
+                <li><b>N.Print:</b> Nhập số lần in cho người sử dụng này.</li>
+                <li><b>From Dis(%):</b> Có quyền được giảm discount POS từ.</li>
+                <li><b>To Dis:</b> Có quyền được giảm discount POS đến.</li>
+                <li><b>Print not paid:</b> Có quyền được in các hóa đơn chưa ghi nhận.</li>
+                <li><b>Reprint Captain Order:</b> Có quyền được in lại phiếu order.</li>
+                <li><b>Reprint bill pass date:</b> Có quyền được in lại hóa đơn qua ngày.</li>
+                <li><b>Locked city ledger:</b> Khóa quyền thanh toán công nợ.</li>
+                <li><b>Delete/Confirm(E):</b> Có quyền xuất và xóa hóa đơn điện tử.</li>
+                <li><b>Sub list:</b> Có quyền tách hóa đơn.</li>
+                <li><b>Permissions:</b> Phân quyền mã User mới.</li>
+                <li><b>Reset password:</b> đổi mật khẩu người sử dụng lại thành “123”. </li>
+            </ul>
+        </div>
+    </div>
+    <p>
+        <span class="wrap-content-tab-padding" style="color:red;">Lưu ý</span>: Sau phần quyền phải nhấn <b>Permission</b> để cập nhật và thoát phần mềm vào lại để xử dụng quyền mới.
+    </p>
+
+<h3 id="shift_list" class="h2red">2.15 Danh mục ca làm việc (Shift List)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/shift_list.png" alt="shift_list" width="500" height="400"></div>
+    <p onclick="toggleGuide('shift-list-details', 'shift-list-detail-summary')">Nhấn vào để xem chi tiết</p>
+    <div id="shift-list-details" style="display: none;">
+        <div>
+            <ul>
+                <li><b>ID:</b> Mã ca</li>
+                <li><b>Shift Name:</b> Tên ca làm</li>
+                <li><b>Start Time:</b> Thời gian bắt đầu ca làm</li>
+                <li><b>End Time:</b> Thời gian kết thúc ca làm</li>
+            </ul>
+        </div>
+    </div>
+
+<h3 id="nationality" class="h2red">2.16 Danh mục quốc gia (Nationality)</h3>    
+    <div class="center"> <img class="image-border" src="./_page/image/nationality_list.png" alt="nationality_list" width="500" height="400"></div>
+    <p onclick="toggleGuide('nationality-details', 'nationality-detail-summary')">Nhấn vào để xem chi tiết</p>
+    <div id="nationality-details" style="display: none;">
+        <div>
+            <ul>
+                <li><b>Item Code:</b> Mã Quốc tịch</li>
+                <li><b>Country Name:</b> Tên</li>
+                <li><b>Vietnamese:</b> Tên tiếng Việt</li>
+                <li><b>Areamarket:</b> Thuộc khu vực thị trường nào</li>
+                <li><b>Export Excel:</b> Xuất file Excel</li>
+                <li><b>Exit:</b> Thoát khỏi danh mục</li>
+            </ul>
+        </div>
+    </div>
+
+<h3 id="world_city" class="h2red">2.17 Danh mục thành phố (World City)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/world_city.png" alt="world_city" width="500" height="400"></div>
+
+<h3 id="agent_list" class="h2red">2.18 Danh mục khách hàng (Agent Company)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/agent_list.png" alt="agent_list" width="500" height="400"></div>
+
+<h3 id="area_list" class="h2red">2.19 Danh mục Khu vực (Area Market List)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/area_list.png" alt="area_list" width="500" height="400"></div>
+
+<h3 id="guest_list" class="h2red">2.20 Danh mục nguồn khách (Guest Source List)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/guest_list.png" alt="guest_list" width="500" height="400"></div>
+
+<h3 id="confirm_booking" class="h2red">2.21 Danh mục hình thức đảm bảo booking (Confirm Reservation List)</h3>
+    <div><p>Tích vào ô để xác nhận hình thức chọn đảm bảo</p>
+    </div>
+    <div class="center"> <img class="image-border" src="./_page/image/confirm_list.png" alt="confirm_list" width="500" height="400"></div>
+
+<h3 id="purpose_list" class="h2red">2.22 Danh mục mục đích đến của khách (Purpose Arrived List)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/purpose_list.png" alt="purpose_list" width="500" height="400"></div>
+
+<h3 id="airline_list" class="h2red">2.23 Danh mục mục hãng hàng không (Air Line List)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/airline_list.png" alt="airline_list" width="500" height="400"></div>
+
+<h3 id="source_booking" class="h2red">2.24 Danh mục nguồn gốc boooking (Source Booking)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/source_booking.png" alt="source_booking" width="500" height="400"></div>
+
+<h3 id="promotion_list" class="h2red">2.25 Danh mục khuyến mãi (Promotion List)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/promotion_list.png" alt="promotion_list" width="500" height="400"></div>
+    <p onclick="toggleGuide('promotion-list-details', 'promotion-list-summary')">Nhấn vào để xem chi tiết</p>
+    <div id="promotion-list-details" style="display: none;">
+        <div>
+            <ul>
+                <li><b>ID:</b> Mã của chương trình</li>
+                <li><b>Description:</b> Tên của chương trình</li>
+                <li><b>From Date/To Date:</b> Khuyến mãi từ ngày……….đến ngày……..</li>
+                <li><b>Detail Promotion:</b> Nhập chi tiết cho các chương trình khuyến mãi</li>
+            </ul>
+        </div>
+    </div>
+
+<h3 id="billaddress_group" class="h2red">2.26 Danh mục đối tượng thanh toán hóa đơn (Bill address)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/bill_address_list.png" alt="bill_address_list" width="500" height="400"></div>
+    <div>
+    <ul>
+        <li><b>Bill Address:</b> Đối tượng thanh toán.</li>
+        <li><b>Create Master:</b>Tạo bill master khi chọn Đối tượng này.</li>
+    </ul>
+    </div>
+ 
+<h3 id="payment_type" class="h2red">2.27 Danh mục các hình thức thanh toán (Payment type)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/payment_type.jpg" alt="payment_type" width="500" height="400"></div>
+        <p class="wrap-content-p">
+            <span class="wrap-content-p-path wrap-content-tab-padding">Các bước thực hiện:</span><br />
+            <ul class="wrap-content-ul01">
+                <li class="wrap-content-tab-padding">
+                    <span class="wrap-content-ul-title">(1)</span>: Vào File (trên thanh công cụ)  
+                </li>
+                <li class="wrap-content-tab-padding">
+                    <span class="wrap-content-ul-title">(2)</span>: Chọn Payment type (dòng 27)
+                </li>
+                <li class="wrap-content-tab-padding">
+                    <span class="wrap-content-ul-title">(3)</span>: Nhập thông tin hình thức thanh toán mới ở dòng cuối cùng 
+                </li>
+                <li class="wrap-content-tab-padding">
+                    <span class="wrap-content-ul-title">(4)</span>: Nhấn sang dòng khác để lưu lại 
+                </li>
+            </ul>
+            <span style="color: red;">Lưu ý:</span> Cột Charge(%) = Bank fee (%)
+        </p>
+
+<h3 id="card_type" class="h2red">2.28 Danh mục các loại thẻ thanh toán (Card payment type)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/card_list.png" alt="card_list" width="400" height="300"></div>
+
+<h3 id="reason_cancel" class="h2red">2.29 Danh mục các lý do hủy booking (Reason cancel booking)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/reason_cancel.png" alt="reason_cancel" width="400" height="300"></div>
+
+<h3 id="reason_locked" class="h2red">2.30 Danh mục các lý do khóa phòng (Reason locked room)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/reason_locked.png" alt="reason_locked" width="400" height="300"></div>
+
+<h3 id="reason_maintenance" class="h2red">2.31 Danh mục các lý do để bảo dưỡng phòng (Reason maintenance room)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/reason_maintenance.png" alt="reason_maintenance" width="400" height="300"></div>
+
+<h3 id="reason_houseuse" class="h2red">2.32 Danh mục các lý do phòng sử dụng nội bộ (Reason management in use)</h3>
+    <div class="center"> <img class="image-border" src="./_page/image/reason_houseuse.png" alt="reason_houseuse" width="400" height="300"></div>

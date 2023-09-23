@@ -1,0 +1,513 @@
+﻿<h3 id="availability" class="h2red">3.1.  Dự báo phòng (Availability)</h3>
+    Giao diện màn hình ➔ Availability ➔ StartDate ➔ EndDate<br/>
+    <div class="center"> <img class="image-border" src="./_page/image/availability.png" alt="availability" width="600" height="400"></div><br/>
+    <div class="center"> <img class="image-border" src="./_page/image/form_availability.png" alt="form availability" width="600" height="400"></div><br/>
+    <p onclick="toggleGuide('availability-details', 'availability-summary')">Nhấn vào đây để xem thông tin chi tiết của bảng</p>
+    <div id="availability-details" style="display: none;">
+    <div class="align">
+    <table> 
+        <tr> <th style="text-align: center;">Room Arrivals</th> <td style="background: #D0F8CC; text-align: center;">Phòng đến</td> </tr> 
+        <tr> <th style="text-align: center;">Walk-In</th> <td style="background: #D0F8CC; text-align: center;">Khách walk in</td> </tr> 
+        <tr> <th style="text-align: center;">House Use</th> <td style="background: #D0F8CC; text-align: center;">Sử dụng cho nội bộ</td> </tr> 
+        <tr> <th style="text-align: center;">Locked</th> <td style="background: #D0F8CC; text-align: center;">Phòng khóa</td> </tr> 
+        <tr> <th style="text-align: center;">Maintenance</th> <td style="background: #D0F8CC; text-align: center;">Phòng bảo trì</td> </tr> 
+        <tr> <th style="text-align: center;">Departures</th> <td style="background: #D0F8CC; text-align: center;">Khách rời đi</td> </tr> 
+        <tr> <th style="text-align: center;">Room Inhouse</th> <td style="background: #D0F8CC; text-align: center;">Phòng đang sử dụng</td> </tr> 
+        <tr> <th style="text-align: center;">Guest Forecast</th> <td style="background: #D0F8CC; text-align: center;">Dự báo khách hàng</td> </tr> 
+        <tr> <th style="text-align: center;">Guest Arrivals</th> <td style="background: #D0F8CC; text-align: center;">Khách đến</td> </tr> 
+        <tr> <th style="text-align: center;">Guest Walk-In</th> <td style="background: #D0F8CC; text-align: center;">Khách Walk in</td> </tr> 
+        <tr> <th style="text-align: center;">Guest Departures</th> <td style="background: #D0F8CC; text-align: center;">Khách hàng rời đi</td> </tr> 
+        <tr> <th style="text-align: center;">Guest Inhouse</th> <td style="background: #D0F8CC; text-align: center;">Khách hàng đang sử dụng</td> </tr> 
+        <tr> <th style="text-align: center;">Room Availability</th> <td style="background: #D0F8CC; text-align: center;">Phòng khả dụng</td> </tr> 
+        <tr> <th style="text-align: center;">Occupancy(%)</th> <td style="background: #D0F8CC; text-align: center;">Tỷ lệ sử dụng (%)</td> </tr> 
+        <tr> <th style="text-align: center;">Room Arrivals Allotment</th> <td style="background: #D0F8CC; text-align: center;">Phòng đặt trước</td> </tr> 
+        <tr> <th style="text-align: center;">Room TENTATIVE</th> <td style="background: #D0F8CC; text-align: center;">Phòng dự kiến</td> </tr> 
+        <tr> <th style="text-align: center;">Total</th> <td style="background: #D0F8CC; text-align: center;">Tổng</td> </tr> 
+        <tr> <th style="text-align: center;">Occupancy(% Allot + Tenta)</th> <td style="background: #D0F8CC; text-align: center;">Tỷ lệ sử dụng (% Phân bổ + Dự kiến)</td> </tr> 
+        <tr> <th style="text-align: center;">Room total</th> <td style="background: #D0F8CC; text-align: center;">Tổng số phòng</td> </tr> 
+        <tr> <th style="text-align: center;">Apartment Total</th> <td style="background: #D0F8CC; text-align: center;">Tổng số phòng</td> </tr> 
+    </table>
+    </div>
+</div>
+
+<h3 id="customer" class="h2red">3.2 Tạo khách hàng (customer)</h3>
+    <p>Tạo khách hàng để khi booking sẽ có sẵn thông tin, nếu khách cũ đặt thì thông tin còn lưu không cần tạo lại.</p>
+    <p>
+        <span class="wrap-content-p-path wrap-content-tab-padding">Các bước thực hiện:</span><br />
+        <ul class="wrap-content-ul01">
+            <li class="wrap-content-tab-padding">
+                    <span class="wrap-content-ul-title">(1)</span>: Giao diện màn hình chính chọn customer 
+                </li>
+                <li class="wrap-content-tab-padding">
+                    <span class="wrap-content-ul-title">(2)</span>: Nhấn add new để thêm mới khách hàng
+                </li>
+                    <div class="center"> <img class="image-border" src="./_page/image/form_customer.png" alt="Form khách hàng" width="600" height="500"></div> <br/>
+                <li class="wrap-content-tab-padding">
+                    <span class="wrap-content-ul-title">(3)</span>: Nhập các thông tin cần thiết
+                </li>
+        <div class="center"> <img class="image-border" src="./_page/image/form_addcustomer.png" alt="form nhập thông tin khách" width="600" height="500"></div>
+        <br/>
+        <span style="color: red;"><b>Lưu ý: </span></b></span>Các thông tin có dấu (*) không được bỏ trống<br/>          
+        <p onclick="toggleGuide('addcustomer-details', 'addcustomer-summary')">Nhấn vào đây để xem ghi chú</p>
+        <div id="addcustomer-details" style="display: none;">
+            <div class="align">
+                <table>
+                    <thead>
+                        <tr><th colspan="2" style="text-align: center;">Chú thích</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th style="text-align: center;"><b>Customer ID:</b></th><td style="background: #D0F8CC; text-align: center;">Mã khách hàng</td></tr>
+                        <tr><th style="text-align: center;"><b>Company Name(*):</b></th> <td style="background: #D0F8CC; text-align: center;">Tên khách hàng</td></tr>
+                        <tr><th style="text-align: center;"><b>Company Invoice VAT:</b></th><td style="background: #D0F8CC; text-align: center;">Mã số thuế</td></tr>
+                        <tr><th style="text-align: center;"><b>Representative:</b></th><td style="background: #D0F8CC; text-align: center;">Người đại diện</td></tr>
+                        <tr><th style="text-align: center;"><b>Position:</b></th><td style="background: #D0F8CC; text-align: center;">Chức vụ</td></tr>
+                        <tr><th style="text-align: center;"><b>Contact Person/Title:</b></th><td style="background: #D0F8CC; text-align: center;">Người liên hệ</td></tr>
+                        <tr><th style="text-align: center;"><b>License No./Date:</b></th><td style="background: #D0F8CC; text-align: center;">Giấy phép kinh doanh</td></tr>
+                        <tr><th style="text-align: center;"><b>Email Address:</b></th><td style="background: #D0F8CC; text-align: center;">Địa chỉ mail</td></tr>
+                        <tr><th style="text-align: center;"><b>Ctiy(*):</b></th><td style="background: #D0F8CC; text-align: center;">Thành phố</td></tr>
+                        <tr><th style="text-align: center;"><b>Code VAT(*):</b></th><td style="background: #D0F8CC; text-align: center;">Mã vùng</td></tr>
+                        <tr><th style="text-align: center;"><b>Bank name:</b></th><td style="background: #D0F8CC; text-align: center;">Tên chủ tài khoản</td></tr>
+                        <tr><th style="text-align: center;"><b>Account number:</b></th><td style="background: #D0F8CC; text-align: center;">Số tài khoản</td></tr>
+                        <tr><th style="text-align: center;"><b>Phone/Fax(*):</b></th><td style="background: #D0F8CC; text-align: center;">Số điện thoại</td></tr>
+                        <tr><th style="text-align: center;"><b>Country(*):</b></th><td style="background: #D0F8CC; text-align: center;">Quốc tịch</td></tr>
+                        <tr><th style="text-align: center;"><b>Area Market(*):</b></th><td style="background: #D0F8CC; text-align: center;">Khu vực</td></tr>
+                        <tr><th style="text-align: center;"><b>Type(*):</b></th><td style="background: #D0F8CC; text-align: center;">Loại khách</td></tr>
+                        <tr><th style="text-align: center;"><b>No.Of.Day.Debit:</b></th><td style="background: #D0F8CC; text-align: center;">Số ngày khách ở</td></tr>
+                        <tr><th style="text-align: center;"><b>Address(*):</b></th> <td style="background: #D0F8CC; text-align: center;">Địa chỉ</td></tr>
+                        <tr><th style="text-align: center;"><b>Address VAT:</b></th><td style="background: #D0F8CC; text-align: center;">Mã số thuế</td></tr>
+                        <tr><th style="text-align: center;"><b>Remark:</b></th><td style="background: #D0F8CC; text-align: center;">Ghi chú</td></tr>
+                        <tr><th style="text-align: center;"><b>Loked City ledger (Bank transfer):</b></th><td style="background: #D0F8CC; text-align: center;">Công nợ</td></tr>
+                        <tr><th style="text-align: center;"><b>Sale person:</b></th><td style="background: #D0F8CC; text-align: center;">Người bán</td></tr>
+                        </tbody>
+                  </table>
+                </div>
+            </div>
+
+<h3 id="reservation" class="h2red">3.3 Đặt phòng (Reservation) </h3>
+    <div>
+        <p class="wrap-content-p">
+            Reservation là chức năng đặt phòng để lễ tân hoặc kinh doanh thao tác đặt phòng cho khách sạn
+        </p>
+        <span class="wrap-content-p-path wrap-content-tab-padding">Các bước thực hiện:</span><br />
+        <ul class="wrap-content-ul01">
+            <li class="wrap-content-tab-padding">
+                <span class="wrap-content-ul-title">(1)</span>: Nhấn "New" để tạo thêm booking mới<br/></li>
+                <div class="center"> <img class="image-border" src="./_page/image/addnew_raservation.png" alt="New booking" width="700" height="500"></div><br/>
+                <li class="wrap-content-tab-padding">       
+            <span class="wrap-content-ul-title">(2)</span>: Nhập các thông tin vào ➔ Tích chọn các chú thích (nếu khách yêu cầu) ➔ <b>Save</b> để tạo đơn </li> <br/>
+                <div class="center"> <img class="image-border" id="typeconservation" src="./_page/image/typing_reservation.png" alt="Typing conversation" width="700" height="500"></div><br/>
+    </div> 
+    <p onclick="toggleGuide('customer-details', 'customer-summary')">Nhấn vào đây để xem chú thích</p>
+    <div id="customer-details" style="display: none;">
+        <div class="align">
+            <table>
+                <thead>
+                    <tr><th colspan="2" style="text-align: center;">Chú thích</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th style="text-align: center;">Guest Information</b></td><td style="background: #D0F8CC; text-align: center;">Thông tin khách hàng</td></tr>
+                    <tr><th style="text-align: center;">Book ID</b></td><td style="background: #D0F8CC; text-align: center;">Mã đặt hàng</td></tr>
+                    <tr><th style="text-align: center;">Last Name(*)</b></td><td style="background: #D0F8CC; text-align: center;">Họ của khách hàng</td></tr>
+                    <tr><th style="text-align: center;">First Name(*)</b></td><td style="background: #D0F8CC; text-align: center;">Tên của khách hàng</td></tr>
+                    <tr><th style="text-align: center;">Address</b></td><td style="background: #D0F8CC; text-align: center;">Địa chỉ của khách hàng</td></tr>
+                    <tr><th style="text-align: center;">Email</b></td><td style="background: #D0F8CC; text-align: center;">Địa chỉ email của khách hàng</td></tr>
+                    <tr><th style="text-align: center;">Phone/Fax(*)</b></td><td style="background: #D0F8CC; text-align: center;">Số điện thoại liên lạc của khách hàng</td></tr>
+                    <tr><th style="text-align: center;">Contact Person Information</b></td><td style="background: #D0F8CC; text-align: center;">Thông tin người liên hệ</td></tr>
+                    <tr><th style="text-align: center;">Company/Agent Information</b></td><td style="background: #D0F8CC; text-align: center;">Thông tin công ty du lịch hoặc người đại diện của khách hàng (nếu có)</td></tr>
+                    <tr><th style="text-align: center;">Area Market(*)</b></td><td style="background: #D0F8CC; text-align: center;">Khu vực hoạt động của công ty du lịch (nếu có)</td></tr>
+                    <tr><th style="text-align: center;">Market Segment Code(*)</b></td><td style="background: #D0F8CC; text-align: center;">Mã vùng thị trường của công ty du lịch (nếu có)</td></tr>
+                    <tr><th style="text-align: center;">Method of Payment(*)</b></td><td style="background: #D0F8CC; text-align: center;">Phương thức thanh toán</td></tr>
+                    <tr><th style="text-align: center;">Folio Address(*)</b></td><td style="background: #D0F8CC; text-align: center;">Địa chỉ ví tiền điện tử (nếu có)</td></tr>
+                    <tr><th style="text-align: center;">Authority/Discount(*)</b></td><td style="background: #D0F8CC; text-align: center;">Quyền lợi hoặc giảm giá (nếu có)</td></tr>
+                    <tr><th style="text-align: center;">Purpose Arrival(*)</b></td><td style="background: #D0F8CC; text-align: center;">Ngày dự định đến của khách hàng</td></tr>
+                    <tr><th style="text-align: center;">Source Booking(*)</b></td><td style="background: #D0F8CC; text-align: center;">Nguồn đặt hàng (trực tiếp hoặc thông qua đại lý)</td></tr>
+                    <tr><th style="text-align: center;">Promotion Name(*)</b></td><td style="background: #D0F8CC; text-align: center;">Tên chương trình khuyến mãi (nếu có)</td></tr>
+                    <tr><th style="text-align: center;">Source Codes(*)</b></td><td style="background: #D0F8CC; text-align: center;">Mã nguồn đặt hàng (nếu có)</td></tr>
+                    <tr><th style="text-align: center;">Booking Status Information</b></td><td style="background: #D0F8CC; text-align: center;">Thông tin trạng thái đơn hàng</td></tr>
+                    <tr><th style="text-align: center;">Booking status(*)</b></td><td style="background: #D0F8CC; text-align: center;">Trạng thái đơn hàng (đã xác nhận, chưa xác nhận, hủy đặt hàng)</td></tr>
+                    <tr><th style="text-align: center;">Card Type</b></td><td style="background: #D0F8CC; text-align: center;">Loại thẻ thanh toán (nếu có)</td></tr>
+                    <tr><th style="text-align: center;">Card #/Valid Till</b></td><td style="background: #D0F8CC; text-align: center;">Số thẻ và ngày hết hạn của thẻ thanh toán (nếu có)</td></tr>
+                    <tr><th style="text-align: center;">Amount Deposit</b></td><td style="background: #D0F8CC; text-align: center;">Số tiền đặt cọc (nếu có)</td></tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+              <li class="wrap-content-tab-padding">
+                <span class="wrap-content-ul-title">(3)</span>: Chọn ngày đến, ngày đi ➔ Nhấn <b>Get Forecast</b> để tạo dự báo phòng
+             </li>
+             <br/>  <!--tạo khoảng trống cho đẹp giao diện-->
+             <div class="center"> <img class="image-border" src="./_page/image/get_forecast.png" alt="get_forecast" width="650" height="400"></div>
+             <br/>  <!--tạo khoảng trống cho đẹp giao diện-->
+             <li class="wrap-content-tab-padding">
+                <span class="wrap-content-ul-title">(4)</span>: Nhập thông tin ngày ➔ nhấn save ➔ <b>Create Polio</b> để lưu đơn <br/>
+             </li>
+        </div>
+            <div class="center"> <img class="image-border" src="./_page/image/Typing_room.png" alt="Typing room" width="650" height="400"></div><br/>
+            <p onclick="toggleGuide('typing-room-details', 'typing-room-summary')">Nhấn vào đây để xem chú thích</p>
+            <div id="typing-room-details" style="display: none;">
+                <div class="align">              
+                    <table>
+                        <thead>
+                            <tr><th colspan="2" style="text-align: center;">Chú thích</th></tr>
+                        </thead>
+                        <tbody>
+                        <tr><th style="text-align: center;">Arr Date</b></td><td style="background: #D0F8CC; text-align: center;">Ngày đến</td></tr>
+                        <tr><th style="text-align: center;">Arr Time</b></td><td style="background: #D0F8CC; text-align: center;">Giờ đến</td></tr>
+                        <tr><th style="text-align: center;">Dept Date</b></td><td style="background: #D0F8CC; text-align: center;">Ngày đi</td></tr>
+                        <tr><th style="text-align: center;">Dept Time</b></td><td style="background: #D0F8CC; text-align: center;">Giờ đi</td></tr>
+                        <tr><th style="text-align: center;">NITES</b></td><td style="background: #D0F8CC; text-align: center;"><string>Số đêm</string></td></tr>
+                        <tr><th style="text-align: center;">Room Type</b></td><td style="background: #D0F8CC; text-align: center;">Dạng phòng</td></tr>
+                        <tr><th style="text-align: center;">Forecast</b></td><td style="background: #D0F8CC; text-align: center;"><string>Dự báo </string></td></tr>
+                        <tr><th style="text-align: center;">Qty</b></td><td style="background: #D0F8CC; text-align: center;"><string>Số lượng</string></td></tr>
+                        <tr><th style="text-align: center;">PaxNo</b></td><td style="background: #D0F8CC; text-align: center;"><string>Số khách</string></td></tr>
+                        <tr><th style="text-align: center;">ChildNo.</b></td><td style="background: #D0F8CC; text-align: center;">Trẻ em</td></tr>
+                        <tr><th style="text-align: center;">Rate ID</b></td><td style="background: #D0F8CC; text-align: center;"><string>Mã giá</string></td></tr>
+                        <tr><th style="text-align: center;">Rate</b></td><td style="background: #D0F8CC; text-align: center;">Giá</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+              <p><span style = color:red><b>Lưu ý: </b></span> Sau khi chuyển ngày không thể <b>Delete Reservation</b> mà chỉ có thể <b>Cancel</b>
+ <h3 id="room_allotment" class="h2red">3.4 Đặt giữ phòng (Room Allotment)</h3>
+    <p>Giao diện màn hình chính ➔ Chọn <b>Room Allotment</b></p>         
+    <div class="center"> <img class="image-border" src="./_page/image/open_room_allotment.png" alt="open_room_allotment" width="650" height="400"></div>
+    <div class="center"> <img class="image-border" src="./_page/image/form_room_allotment.png" alt="form_room_allotment" width="650" height="450"></div>
+    <br/><!--Xuống hàng cho đẹp-->
+    <li class="wrap-content-tab-padding">
+        <span class="wrap-content-ul-title">Room Type</span>
+     </li>
+     <br/><!--Xuống hàng cho đẹp-->
+    <div class="center"> <img class="image-border" src="./_page/image/roomtype_roomallotment.png" alt="roomtype_roomallotment" width="500" height="400"></div>
+    <p onclick="toggleGuide('room-allotment-details', 'room-allotment-summary')">Nhấn vào đây để xem ghi chú</p>
+    <div id="room-allotment-details" style="display: none;">
+        <ul>
+            <li><b>Room Type:</b> Loại phòng.</li>
+            <li><b>Qty:</b> Số lượng phòng.</li>
+            <li><b>QtyPerson.:</b> Số lượng người lớn.</li>
+            <li><b>QtyChild:</b> Số lượng trẻ em.</li>
+            <li><b>RateId:</b> Mã giá phòng.</li>
+            <li><b>Rate:</b> Giá phòng.</li>
+            <li><b>From Date/To Date:</b> Giữ phòng từ ngày đến ngày.</li>
+            <li><b>Create Folios:</b> Tạo bill các phòng trong BK(mỗi chỉnh sửa màn hình Detail đều phải Create Folios lại).</li>
+        </ul>
+    </div>
+    <li class="wrap-content-tab-padding">
+        <span class="wrap-content-ul-title">Room List - Detail Booking</span>
+     </li>
+     <div class="center"> <img class="image-border" src="./_page/image/roomlist_roomallotment.png" alt="roomlist_roomallotment" width="500" height="400"></div>
+     <p onclick="toggleGuide('room-list-booking-details', 'room-list-booking-summary')">Nhấn vào đây để xem ghi chú</p>
+     <div id="room-list-booking-details" style="display: none;">
+        <ul>
+            <li><b>R.Type:</b> Loại phòng.</li>
+            <li><b>Confirm:</b> Chọn.</li>
+            <li><b>Arrival Date:</b> Ngày đến.</li>
+            <li><b>Rate ID:</b> Mã giá phòng.</li>
+            <li><b>Rate:</b> Giá phòng.</li>
+        </ul>
+    </div>
+    <li class="wrap-content-tab-padding">
+        <span class="wrap-content-ul-title">Transfer to Reservation + Cut Off</span>: Tích vào ô <b>confirm</b> ➔ Chọn chức năng muốn đổi
+     </li>
+     <table>
+        <tr><th align="left" style="background-color:red;">Màu đỏ</th><td>Đã chuyển sang reservation</td> </tr>
+        <tr><th align="left" style="background-color:yellow;">Màu vàng</th><td>Đã cut off</td> </tr>
+     </table>
+     <div class="center"> <img class="image-border" src="./_page/image/transfer_roomallotment.png" alt="transfer_roomallotment" width="500" height="400"></div>
+
+
+<h3 id="sales" class="h2red">3.5 Sale</h3>
+    <div><p>Giao diện màn hình chính ➔ Chọn <b>Sale</b> ➔ Chọn mục muốn sale</p></div>
+    <div class="center"> <img class="image-border" src="./_page/image/open_sale.png" alt="open_sale" width="400" height="300"></div>
+    <div class="center"> <img class="image-border" src="./_page/image/choose_sale.png" alt="choose_sale" width="400" height="300"></div>
+    <div class="center"> <img class="image-border" src="./_page/image/form_sale.png" alt="form_sale" width="700" height="500"></div>
+    <div>
+        <p><b>Các trạng thái booking:</b></p>
+        <ul>
+            <li><b>Prospect:</b> Lọc những booking tiềm năng.</li>
+            <li><b>Tentative:</b> Lọc những booking dự kiến.</li>
+            <li><b>Definite:</b> Lọc những booking Xác định.</li>
+            <li><b>Transfer to Reservation:</b> Lọc những booking đã chuyển Reservation.</li>
+            <li><b>All:</b> Hiển thị tất cả booking.</li>
+        </ul>
+    </div>
+    <div>
+        <p><b>Tìm kiếm booking</b></p>
+        <ul>
+            <li><b>BK-ID:</b> Mã BK.</li>
+            <li><b>Guest name:</b> Tên người đặt BK.</li>
+            <li><b>Company/Agent:</b> Tên công ty.</li>
+            <li><b>TOUR-ID:</b> Mã đoàn.</li>
+            <li><b>Phone Number:</b> Số điện thoại.</li>
+            <li><b>Deposited/None:</b> BK có đặt cọc/ hay không đặt cọc.</li>
+            <li><b>Find:</b> Tìm theo các trường đã nhập.</li>
+            <li><b>Back:</b> Xóa các trường đang tìm.</li>
+        </ul>
+    </div>
+    <div>
+        <p><b>Các nút chức năng</b></p>
+        <ul>
+            <li>Double Click chuột vào BK muốn xem: Xem lại các BK đã đặt.</li>
+            <li>Retrive View: Làm mới màn hình tại đây.</li>
+            <li>Check Guest List Expected C/D: D/s khách đến ngày đặt cọc.</li>
+            <li>Import Guest list from Excel: Lấy danh sách khách từ file Excel.</li>
+            <li>Availability: Xem dự báo phòng.</li>
+            <li>Export to Excel: Kết xuất file Excel.</li>
+            <li>Function: Màn hình chức năng.</li>
+            <li>New: Tạo một booking mới.</li>
+        </ul>
+    </div>
+    <div>
+        <p>Để tạo mới booking: <b>New</b> ➔ Nhập thông tin ➔ Save/Create Folios ➔ Chọn ngày đến và đi ➔ Get Forecast ➔ Chọn phòng ➔ Save</p>
+    </div>
+    <div class="center"> <img class="image-border" src="./_page/image/type_sale_reservation.png" alt="type_sale_reservation" width="600" height="500"></div>
+    <div><p>Để chuyển booking sang <b>Reservation:</b> Chọn <b>Miscellaneous</b> ➔ Chọn tiền cọc ➔ Save ➔ Nhấn nút <b>Transfer to Reservation</b></p>
+    <div class="center"> <img class="image-border" src="./_page/image/miscellaneous_sale.png" alt="miscellaneous_sale" width="600" height="500"></div>
+
+<h3 id="post_ohter_service" class="h2red">3.6 Thêm dịch vụ (Post other Service)</h3>
+  <li class="wrap-content-tab-padding">
+        <span class="wrap-content-ul-title">Cách 1:</span>Chọn nút <b>Event</b> khi tạo reservation ➔ Chọn dịch vụ ➔ Apply ➔ Thêm vào
+    </li>
+        <div class="center"> <img class="image-border" src="./_page/image/events_in_reservation.png" alt="events in reservation" width="400" height="300"></div><br/>
+        <div class="align">
+        <table>
+            <tr><th style="text-align: center;">Meal Plan Booking: </th><td style="background: #D0F8CC; text-align: center;">Đặt món ăn</td></tr>
+            <tr><th style="text-align: center;">Conference Booking: </th><td style="background: #D0F8CC; text-align: center;">Đặt hội nghị</td></tr>
+            <tr><th style="text-align: center;">Pick up Airport / Car Rent: </th><td style="background: #D0F8CC; text-align: center;">Dịch vụ đưa đón / Thuê xe</td></tr>
+            <tr><th style="text-align: center;">Lunch/ Dinner/ Others: </th><td style="background: #D0F8CC; text-align: center;">Bữa Trưa/ Tối/ Khác</td></tr>
+        </table>
+        </div>
+        <p><span class="wrap-content-tab-padding"><b>Ví dụ: </b> Đặt tiệc nhà hàng ở khách sạn: Events ➔ Meal Plan Booking ➔ Apply <br/></p>
+        <div class="center"> <img class="image-border" src="./_page/image/pick_meal_plan.png" alt="pick meal plan" width="400" height="300"></div><br/>
+        <p>Nhập các thông tin ➔ <b>Save ➔ Add Item</b></p>
+        <div class="center"> <img class="image-border" src="./_page/image/form_pick_meal_plan.png" alt="form pick meal plan" width="600" height="500"></div><br/>
+        <p onclick="toggleGuide('form-meal-plan-details', 'form-meal-plan-summary')">Nhấn vào đây để xem ghi chú</p>
+        <div id="form-meal-plan-details" style="display: none;">
+            <div class="align"> 
+                <table> 
+                    <tr> <th style="text-align: center;">Status(*)</th> <td style="background: #D0F8CC; text-align: center;">Trạng thái</td> </tr> 
+                    <tr> <th style="text-align: center;">Card Type:</th> <td style="background: #D0F8CC; text-align: center;">Loại thẻ</td> </tr> 
+                    <tr> <th style="text-align: center;">Card#/Valid:</th> <td style="background: #D0F8CC; text-align: center;">Số thẻ/Hiệu lực</td> </tr> 
+                    <tr> <th style="text-align: center;">Set Time Till:</th> <td style="background: #D0F8CC; text-align: center;">Thời gian đặt</td> </tr> 
+                    <tr> <th style="text-align: center;">Nature of Event(*):</th> <td style="background: #D0F8CC; text-align: center;">Loại sự kiện</td> </tr> 
+                    <tr> <th style="text-align: center;">Source Booking(*):</th> <td style="background: #D0F8CC; text-align: center;">Nguồn đặt</td> </tr> 
+                    <tr> <th style="text-align: center;">Source Sales(*):</th> <td style="background: #D0F8CC; text-align: center;">Nguồn bán</td> </tr> 
+                    <tr> <th style="text-align: center;">Tour Code ID/ Share(%):</th> <td style="background: #D0F8CC; text-align: center;">Mã tour/Chia sẻ</td> </tr> 
+                    <tr> <th style="text-align: center;">Commissions(%):</th> <td style="background: #D0F8CC; text-align: center;">Hoa hồng</td> </tr> 
+                </table>
+            </div>
+        </div>
+        <div>
+            <p><span style="color:red"><b>Lưu ý:</b></span> Khi nhập thông tin phải nhập thông tin có dấu <b>(*)</b> mới có thể lưu</p><br/>
+            <p>Sau khi nhập thông tin hệ thống sẽ chỉ giữ chỗ chứ chưa xác nhận: Nhập số lượng khách và chọn nhà hàng ➔ Add Item ➔ Chọn món ➔ Apply ➔ Xác nhận đặt thành công</p><br/>
+        </div>
+        <div class="center"> <img class="image-border" src="./_page/image/form_add_item.png" alt="form add item" width="600" height="500"></div><br/>
+        <div><span class="wrap-content-tab-padding"><b>In báo cáo: </b>Print ➔ Chọn mục muốn in ➔ Apply </span></div>
+        <div class="center"> <img class="image-border" src="./_page/image/print_reservation.png" alt="print reservation" width="400" height="300"></div><br/>
+        <li class="wrap-content-tab-padding">
+            <span class="wrap-content-ul-title">Cách 2:</span>Giao diện màn hình chính ➔ <b>Post other Service</b> ➔ nhập các thông tin vào ➔ <b>Add</b> để thêm mới
+        </li>
+        <p></p>
+        <div class="align">
+        <table>
+            <td> <img class="image-border" src="./_page/image/open_post_other_service.png" alt="open_post_other_service" width="300" height="400"></div></td>
+            <td><img class="image-border" src="./_page/image/post_other_service.png" alt="post_other_service" width="500" height="400"></div></td>
+        </table>
+        </div>
+        <p onclick="toggleGuide('post-other-service-details', 'post-other-service-summary')">Nhấn vào đây để xem ghi chú</p>
+        <div id="post-other-service-details" style="display: none;">
+            <div class="align">
+            <table>
+                <tr><th style="text-align: center;">Service ID:</th><td style="background: #D0F8CC; text-align: center;">Mã dịch vụ</td></tr>
+                <tr><th style="text-align: center;">Bill No.:</th><td style="background: #D0F8CC; text-align: center;">Số hóa đơn</td></tr>
+                <tr><th style="text-align: center;">Date:</th><td style="background: #D0F8CC; text-align: center;">Ngày</td></tr>
+                <tr><th style="text-align: center;">Service Name:</th><td style="background: #D0F8CC; text-align: center;">Tên dịch vụ</td></tr>
+                <tr><th style="text-align: center;">Qty:</th><td style="background: #D0F8CC; text-align: center;">Số lượng</td></tr>
+                <tr><th style="text-align: center;">Type:</th><td style="background: #D0F8CC; text-align: center;">Loại</td></tr>
+                <tr><th style="text-align: center;">Rate:</th><td style="background: #D0F8CC; text-align: center;">Giá</td></tr>
+                <tr><th style="text-align: center;">Amount:</th><td style="background: #D0F8CC; text-align: center;">Số tiền</td></tr>
+                <tr><th style="text-align: center;">Amt.SC(%):</th><td style="background: #D0F8CC; text-align: center;">Số tiền phí dịch vụ (%)</td></tr>
+                <tr><th style="text-align: center;">Amt.VAT(%):</th><td style="background: #D0F8CC; text-align: center;">Số tiền VAT (%)</td></tr>
+                <tr><th style="text-align: center;">Total:</th><td style="background: #D0F8CC; text-align: center;">Tổng cộng</td></tr>
+                <tr><th style="text-align: center;">Comments:</th><td style="background: #D0F8CC; text-align: center;">Ghi chú</td></tr>
+                <tr><th style="text-align: center;">Guest Name/ Address:</th><td style="background: #D0F8CC; text-align: center;">Tên/Địa chỉ khách hàng </td></tr>
+                <tr><th style="text-align: center;">Company / Agent Name:</th><td style="background: #D0F8CC; text-align: center;">Tên công ty/đại lý</td></tr>
+                <tr><th style="text-align: center;">Method of Payment:</th><td style="background: #D0F8CC; text-align: center;">Phương thức thanh toán</td></tr>
+                <tr><th style="text-align: center;">Type Currency Post:</th><td style="background: #D0F8CC; text-align: center;">Loại tiền tệ sau khi thanh toán</td></tr>
+                <tr><th style="text-align: center;">Rate of Exchange:</th><td style="background: #D0F8CC; text-align: center;">Tỷ giá hối đoái</td></tr>
+                <tr><th style="text-align: center;">paid:</th><td style="background: #D0F8CC; text-align: center;">Đã thanh toán</td>
+                <tr><th style="text-align: center;">Add:</th><td style="background: #D0F8CC; text-align: center;">Thêm</td></tr>
+                <tr><th style="text-align: center;">Add New:</th><td style="background: #D0F8CC; text-align: center;">Thêm mới (để tạo thêm dịch vụ)</td></tr>
+                <tr><th style="text-align: center;">Print:</th><td style="background: #D0F8CC; text-align: center;">In</td></tr>
+                <tr><th style="text-align: center;">Folios:</th><td style="background: #D0F8CC; text-align: center;">Folios (chọn </td></tr>
+                <tr><th style="text-align: center;">Delete:</th><td style="background: #D0F8CC; text-align: center;">Xóa</td></tr>
+                <tr><th style="text-align: center;">Exit:</th><td style="background: #D0F8CC; text-align: center;">Thoát</td></tr>
+            </table>
+            </div>
+        </div>
+  <p>&#10148; Một số dịch vụ khác như:</p>
+  <div><ul><li><b>Post City Ledger Payment:</b> Thanh toán công nợ</li></ul></div>
+  <div class="center"> <img class="image-border" src="./_page/image/post_city_payment.png" alt="post_city_payment" width="500" height="400"></div>
+  <div><ul><li><b>Reservation Deposit:</b> Đặt cọc tiền phòng</li></ul></div>
+  <div class="center"> <img class="image-border" src="./_page/image/reservation_deposit.png" alt="reservation_deposit" width="500" height="400"></div>
+  <div><ul><li><b>Meal Plan (Banquet) Deposit:</b> Đặt cọc tiệc</li></ul></div>
+  <div class="center"> <img class="image-border" src="./_page/image/mealplan_deposit.png" alt="mealpaln_deposit" width="500" height="400"></div>
+  <div><ul><li><b>Paid-Out:</b> Trả trước</li></ul></div>
+  <div class="center"> <img class="image-border" src="./_page/image/paid_out.png" alt="paid_out" width="500" height="400"></div>
+    <div>
+        <li class="wrap-content-tab-padding">
+            <span class="wrap-content-ul-title">Cách 3:</span>Giao diện màn hình chính ➔ <b>Reservation</b> ➔ chọn các dịch vụ 
+        </li>
+    </div>
+    <div class="center"> <img class="image-border" src="./_page/image/open_reservation.png" alt="open_reservation" width="400" height="300"></div>
+    <div><ul><li><b>Meal Plan:</b> Đặt tiệc</li></ul></div>
+    <div class="center"> <img class="image-border" src="./_page/image/mealplan_in_reservation.png" alt="mealplan_in_reservation" width="500" height="400"></div>
+    <p><b>Xem trạng thái:</b></p>
+    <ul>
+        <li><b>Expected:</b> Lọc những tiệc chuẩn bị đến.</li>
+        <li><b>Departured:</b> Lọc những tiệc đã đi.</li>
+        <li><b>Cancel:</b> Lọc những tiệc đã bị huỷ bởi người sử dụng.</li>
+        <li><b>Finish:</b> Lọc những tiệc đã hoàn thành.</li>
+    </ul>
+    <p><b>Tìm kiếm:</b></p>
+    <ul>
+        <li><b>Order Id:</b> Mã tiệc.</li>
+        <li><b>Booking ID:</b> Mã BK (Nếu đặt tiệc này từ Reservation).</li>
+        <li><b>Date Envent:</b> Ngày diễn ra.</li>
+        <li><b>Order Date:</b> Ngày đặt.</li>
+        <li><b>First Name, Last Name:</b> Tìm theo tên.</li>
+    </ul>
+    <br/>
+    <p>Để thêm mới nhấn <b>New</b> sẽ hiện lên giao diện đặt tiệc rồi tiến hành đặt tiệc như ở <b>cách 1</b></p>
+    <div><ul><li><b>Conference Booking:</b> Đặt hội nghị</li></ul></div>
+    <div class="center"> <img class="image-border" src="./_page/image/form_conference_booking.png" alt="form_conference_booking" width="500" height="400"></div>
+    <p>Nhấn nút <b>New</b>➔ Chọn id booking ➔ Nhập các thông tin khách ➔ <b>Save</b> ➔ Nhập thông tin phòng họp ➔ <b>Save</b>➔ <b>Add Item, Meal Plan (nếu cần) ➔ </b>Save</b></p>
+    <div class="center"> <img class="image-border" src="./_page/image/book_conference.png" alt="book_conference" width="500" height="400"></div>
+    <br/>
+    <div><ul><li><span style="color:red;"><b>Pick up:</b> Đưa đón</span></li></ul></div>
+    <p>Chọn địa điểm đưa đón ➔ Nhập thông tin ➔ Nhập tên khách</p>
+    <div class="center"> <img class="image-border" src="./_page/image/form_pick_up.png" alt="pick_up" width="500" height="400"></div>
+    <p onclick="toggleGuide('form-pick-up-details', 'form-pick-up-summary')">Nhấn vào đây để xem ghi chú</p>
+    <div id="form-pick-up-details" style="display: none;">
+            <ul>
+            <li>Guest’s Name: Tên khách.</li>
+            <li>Pickup Type: Loại Pickup (Pickup Airport, Pickup Bus Station,…).</li>
+            <li>ETA/ETD: Đưa/đón khách.</li>
+            <li>Flight: Chuyến bay.</li>
+            <li>Date: Ngày thực hiện.</li>
+            <li>Time: Thời gian đưa/đón khách.</li>
+            <li>Pax No.: Số lượng khách.</li>
+            <li>Amount: Giá tiền.</li>
+            <li>Type: Loại tiền.</li>
+            <li>V.A.T: Số phần trăm thuế.</li>
+            <li>S.C: Số phần trăm phí phục vụ.</li>
+            <li>V.A.T/S.C: Bao gồm thuế và phí phục vụ.</li>
+            <li>Remarks: Ghi chú.</li>
+            <li>Discount: Giảm giá.</li>
+            <li>Save: Lưu thông tin.</li>
+            <li>Add New: Tạo mới.</li>
+            <li>Delete: Xóa dịch vụ vừa tạo.</li>
+        </ul>
+    </div>
+    <ul><li><span style="color:red;"><b>Car rent:</b> Thuê xe</span></li></ul>
+    <p>Chọn loại xe ➔ Nhập thông tin ➔ Nhập tên khách</p>
+    <div class="center"> <img class="image-border" src="./_page/image/car_rent.png" alt="car_rent" width="500" height="400"></div>
+    <p onclick="toggleGuide('car-rent-details', 'car-rent-summary')">Nhấn vào đây để xem ghi chú</p>
+    <div id="car-rent-details" style="display: none;">
+        <ul>
+            <li>Guest’s Name: Tên khách.</li>
+            <li>Car Type: Loại xe.</li>
+            <li>Date/Time Start: Ngày/thời gian bắt đầu.</li>
+            <li>Date/Time End: Ngày/thời gian kết thúc.</li>
+            <li>Amount: Giá tiền/Loại tiền.</li>
+            <li>V.A.T: Số phần trăm thuế.</li>
+            <li>S.C: Số phần trăm phí phục vụ.</li>
+            <li>V.A.T/S.C: Bao gồm thuế và phí phục vụ.</li>
+            <li>Remarks: Ghi chú.</li>
+            <li>Discount: Giảm giá.</li>
+            <li>Save: Lưu thông tin.</li>
+            <li>Add New: Tạo mới.</li>
+            <li>Delete: Xóa dịch vụ vừa tạo.</li>
+        </ul>
+    </div>
+    <ul><li><span style="color: red;">Pick Tennis:</span></li> Đặt sân tennis</ul>
+    <p>Thao tác như thuê xe</p>
+    <div class="center"> <img class="image-border" src="./_page/image/pick_tennis.png" alt="pick_tennis" width="500" height="400"></div>
+
+
+<h3 id="copy_booking" class="h2red">3.7 Copy Booking</h3> 
+    <p>Chọn <b>Reservation</b> đã tạo ➔ Chọn ngày đến, đi ➔ Copy booking ➔ Báo thành công và báo <b>id booking</b> mới</p>
+    <div class="center"> <img class="image-border" src="./_page/image/copy_booking.png" alt="copy_booking" width="550" height="400"></div><br/>
+    <div class="center"> <img class="image-border" src="./_page/image/copy_successfully.png" alt="copy_successfully" width="300" height="200" ></div><br/>
+    <p><span style="color: red;">Lưu ý:</span> Khi thông báo muốn giữ số phòng cũ hiện lên <img id="notify_change_roomno" src="./_page/image/notify_change_roomno.png" alt="notify_change_roomno" width="200" height="100" ></p>
+    <table>
+        <tr><th style="text-align: center;">Yes</th><td style="background: #D0F8CC; text-align: center;">Số phòng của booking mới sẽ giữ nguyên</td></tr>
+        <tr><th style="text-align: center;">No</th><td style="background: #D0F8CC; text-align: center;">Booking mới sẽ chưa tạo phòng cần vào và tạo thêm phòng</td></tr>
+    </table>
+
+<h3 id="membership" class="h2red">3.8 Thành viên (MemberShip)</h3>
+<p>Giao diện màn hình chính ➔ <b>Membership</b></p> 
+<div class="center"> <img class="image-border" src="./_page/image/open_membership.png" alt="open_membership" width="500" height="400"></div>
+<div class="center"> <img class="image-border" src="./_page/image/form_membership.png" alt="form_membership" width="500" height="400"></div>
+<div><ul><li><b>Cách tạo thẻ thành viên:</b> ➔ Chọn loại thẻ/ Voucher ➔ Nhập thông tin thẻ ➔ Chọn các khuyên mãi đi kèm </li></ul></div>
+<div class="center"> <img class="image-border" src="./_page/image/form_create_membercard.png" alt="form_create_membercard" width="500" height="400"></div>
+<ul>
+    <li><b>VIP Card Type List:</b>
+        <ul>
+            <li><b>ID:</b> Mã thẻ.</li> 
+            <li><b>Description:</b> Mô tả loại thẻ.</li>
+            <li><b>Accumulated:</b> Điểm tích lũy.</li>
+            <li><b>Points:</b> Số điểm.</li>
+            <li><b>Start Date:</b> Ngày bắt đầu.</li> 
+            <li><b>End Date:</b> Ngày kết thúc.</li> 
+            <li><b>Remarks:</b> Ghi chú cho từng loại thẻ.</li> 
+        </ul>
+    </li>
+    <li><b>Detail Card</b>
+        <ul>
+            <li><b>Service name:</b> Dịch vụ giảm giá.</li>
+            <li><b>Discount:</b> Giảm giá theo %.</li>
+            <li><b>Amount:</b> Giảm giá theo số tiền.</li>
+            <li><b>Max(Room)-0:</b> Unlimited. Số lượng phòng được giảm tối đa. Số lượng bằng 0 sẽ không giới hạn số lượng phòng được giảm.</li>
+            <li><b>Max(Night)-0:</b> Unlimited. Đêm phòng tối đa được giảm. Số lượng bằng 0 sẽ không giới hạn đêm phòng được giảm.</li>
+            <li><b>Nites(FOC)-Bonus:</b> Đêm phòng miễn phí.</li>
+        </ul>
+    </li>
+    <li><b>Detail Accumulated Points</b>
+        <ul>
+            <li><b>Guest Source:</b> Nguồn khách.</li>
+            <li><b>Amt/Rooms:</b> Số tiền hoặc số lượng phòng.</li>
+            <li><b>Point:</b> Số điểm tích lũy.</li>
+            <li><b>Start Date:</b> Ngày bắt đầu áp dụng tích lũy điểm.</li>
+            <li><b>End Date:</b> Ngày kết thúc áp dụng tích lũy điểm.</li>
+        </ul>
+    </li>
+    <li><b>Object Guest</b>
+        <ul>
+            <li><b>ID:</b> Mã.</li>
+            <li><b>Decription:</b> Mô tả.</li>
+        </ul>
+    </li>
+</ul>
+<p><span style="color: red;">Lưu ý:</span>Các dữ liệu muốn nhập thêm sẽ nhập ở dòng dưới cùng </p>
+<ul><li><b>Thẻ V.I.P (Card No./ Voucher No. List):</b>Phát hành thẻ V.I.P.: Chọn tên khách ➔ Chọn thông tin thẻ ➔ Save</li></ul>
+    <div class="center"> <img class="image-border" src="./_page/image/create_membership.png" alt="create_membership" width="500" height="400"></div>
+    <p onclick="toggleGuide('membership-details', 'membership-summary')">Nhấn vào đây để xem ghi chú</p>
+    <div id="membership-details" style="display: none;">
+        <ul>
+            <li><b>Guest’s name(*):</b> Tên khách.</li>
+            <li><b>Sex(*):</b> Giới tính.</li>
+            <li><b>Address:</b> Địa chỉ.</li>
+            <li><b>Id Card No:</b> Số chứng minh nhân dân.</li>
+            <li><b>Date Birth:</b> Ngày tháng năm sinh.</li>
+            <li><b>Telephone:</b> Số điện thoại.</li>
+            <li><b>Customer ID:</b> Mã khách hàng.</li>
+            <li><b>Remakes:</b> Ghi chú.</li>
+            <li><b>Expire:</b> Ngày hết hạn.</li>
+            <li><b>ID/Card No(*):</b> Số thẻ VIP.</li>
+            <li><b>Card Type(*):</b> Loại thẻ.</li>
+            <li><b>Partners(*):</b> Đối tượng khách hàng.</li>
+            <li><b>Date issue(*):</b> Ngày cấp thẻ.</li>
+            <li><b>From Date(*):</b> Ngày hiệu lực.</li>
+            <li><b>To Date(*):</b> Ngày hết hiệu lực.</li>
+        </ul>
+    </div>
