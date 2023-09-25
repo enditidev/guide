@@ -36,3 +36,23 @@
       });
        // End Chữ tự động mất khi chuẩn bị nhâp tìm kiếm 
     });
+
+document.addEventListener("click", function(event) {
+const searchInput = document.getElementById("search-input");
+const searchResults = document.getElementById("search-results");
+
+if (event.target !== searchInput && event.target !== searchResults) {
+    searchResults.style.display = 'none';
+    searchInput.style.borderRadius = '';
+    searchInput.style.borderBottom = '';
+    searchResults.style.borderTop = '';
+}
+else{
+    if (searchInput.value.trim() !== ''){
+        searchResults.style.display = 'block';
+        searchInput.style.borderRadius = '20px 20px 0 0';
+        searchInput.style.borderBottom = 'none';
+        searchResults.style.borderTop = 'none';
+    }  
+}
+});
