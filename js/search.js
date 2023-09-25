@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   var searchInput = document.getElementById("search-input");
   var searchResults = document.getElementById("search-results");
-  var maxResults = 10;
+  var maxResults = 9;
 
   searchInput.addEventListener("keyup", function() {
     reset(); //reset id 
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       if (foundResults < maxResults) {
       } else {
-        var showMoreText = document.createElement("p");
+        var showMoreText = document.createElement("div");
         showMoreText.textContent = "Hiển thị thêm";
         showMoreText.classList.add("show-more-text");
         searchResults.appendChild(showMoreText);
