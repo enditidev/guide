@@ -55,10 +55,8 @@ document.addEventListener("DOMContentLoaded", function() {
       noResultsMessage.textContent = "Không tìm thấy kết quả";
       noResultsMessage.classList.add("can-not-find");
       searchResults.appendChild(noResultsMessage);
-      searchResults.removeChild(showMoreText);
     } else {
       if (foundResults < maxResults) {
-        searchResults.removeChild(showMoreText);
       } else {
         var showMoreText = document.createElement("p");
         showMoreText.textContent = "Hiển thị thêm";
@@ -84,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
       });
   
-      searchResults.removeChild(showMoreText);
     });
   });
     function reset() {
