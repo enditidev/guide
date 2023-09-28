@@ -10,7 +10,7 @@
          if (searchInput.value.trim() !== '') {
            searchResults.style.display = 'block';
            searchInput.style.borderRadius = '20px 20px 0 0';
-           searchInput.style.background = 'rgba(255, 255, 255, 0.7)';
+           searchInput.style.background = 'white';
            searchInput.style.borderBottom = 'none';
            searchInput.style.borderTop = '1px solid grey';
            searchResults.style.borderLeft = '1px solid grey';
