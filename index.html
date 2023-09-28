@@ -13,11 +13,13 @@
     <link href="./css/menu.css" rel="stylesheet" >
     <link href="./css/design_content.css" rel="stylesheet" >
     <link href="./css/moving.css" rel="stylesheet" >
+    <link href="./css/onTop_onBottom.css" rel="stylesheet" >
     <script src="./js/menu.js"></script>
     <script src="./js/search.js"></script>
     <script src="./js/moving.js"></script>
     <script src="./js/search_display.js"></script>
     <script src="./js/results.js"></script>
+    <script src="./js/onTop_onBottom.js"></script>
 </head>
 <body>
     <div class="no-spacing">
@@ -98,38 +100,44 @@
             <img class="image-background" src="./wrapcontent/image/background.png" alt="background" />
         </div>
     
+        <!-- button on top và on bottom -->
+    <button onclick="scrollToTop()" id="btnScrollToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <button onclick="scrollToBottom()" id="btnScrollToBottom">
+        <i class="fas fa-chevron-down"></i>
+    </button>
         <!-- content  -->
-        <div id="content-login"></div>
-        <div id="content-file"></div>
-        <div id="content-sale"></div>
-        <div id="content-reception"></div>
-        <div id="content-house-keeping"></div>
-        <div id="content-reports"></div>
-        <div id="content-system"></div>
-        <div id="content-questions"></div>
-        <div id="content-breakfast"></div>        
-        <script>
-            const ids = ['content-login', 'content-file', 'content-sale', 'content-reception', 'content-house-keeping', 'content-reports', 'content-system', 'content-questions', 'content-breakfast'];
-            const urls = ['wrapcontent/content_login.html', 'wrapcontent/content_file.html', 'wrapcontent/content_sale.html', 'wrapcontent/content_reception.html', 'wrapcontent/content_house_keeping.html', 'wrapcontent/content_reports.html', 'wrapcontent/content_system.html', 'wrapcontent/content_questions.html', 'wrapcontent/content_breakfast.html'];
+    <div id="content-login"></div>
+    <div id="content-file"></div>
+    <div id="content-sale"></div>
+    <div id="content-reception"></div>
+    <div id="content-house-keeping"></div>
+    <div id="content-reports"></div>
+    <div id="content-system"></div>
+    <div id="content-questions"></div>
+    <div id="content-breakfast"></div>        
+    <script>
+        const ids = ['content-login', 'content-file', 'content-sale', 'content-reception', 'content-house-keeping', 'content-reports', 'content-system', 'content-questions', 'content-breakfast'];
+        const urls = ['wrapcontent/content_login.html', 'wrapcontent/content_file.html', 'wrapcontent/content_sale.html', 'wrapcontent/content_reception.html', 'wrapcontent/content_house_keeping.html', 'wrapcontent/content_reports.html', 'wrapcontent/content_system.html', 'wrapcontent/content_questions.html', 'wrapcontent/content_breakfast.html'];
 
-            const fetchPromises = urls.map(url => fetch(url).then(response => response.text()));
+        const fetchPromises = urls.map(url => fetch(url).then(response => response.text()));
 
-            Promise.all(fetchPromises)
-                .then(dataArray => {
-                    dataArray.forEach((data, index) => {
-                        const id = ids[index];
-                        document.getElementById(id).innerHTML = data;
-                    });
-                })
-                .catch(error => {
-                    console.error(error);
-                });        
-        </script>
+        Promise.all(fetchPromises)
+            .then(dataArray => {
+                dataArray.forEach((data, index) => {
+                    const id = ids[index];
+                    document.getElementById(id).innerHTML = data;
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });        
+    </script>
 <style>       
 div + div {
     margin-top: 0;
   }
-
 </style>
 </body>
 </html>
