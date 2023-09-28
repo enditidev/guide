@@ -1,40 +1,28 @@
+#btnScrollToTop,
+#btnScrollToBottom {
+  display: none;
+  position: fixed;
+  right: 20px;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(223, 223, 223, 0.7);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-  #btnScrollToTop {
-    display: none;
-    position: fixed;
-    top: 150px;
-    right: 20px;
-    z-index: 9999;
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 50%;
-    background-color: rgba(223, 223, 223, 0.7);
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  #btnScrollToTop:hover {
-    background-color: #919191;
-  }
-  
-  #btnScrollToBottom {
-    display: none;
-    position: fixed;
-    bottom: 150px;
-    right: 20px;
-    z-index: 9999;
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 50%;
-    background-color: rgba(223, 223, 223, 0.7);
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  #btnScrollToBottom:hover {
-    background-color: #919191;
-  }
+#btnScrollToTop {
+  top: 150px;
+}
+
+#btnScrollToBottom {
+  bottom: 150px;
+}
+
+#btnScrollToTop:hover,
+#btnScrollToBottom:hover {
+  background-color: #919191;
+}
