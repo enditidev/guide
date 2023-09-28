@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const selectors = [
       //Phần 2. Danh mục (file)
-      ".search-content-login",".search-content-building_list", ".search-content-room_list",".search-content-rate_room_type", ".search-content-room_rate_list",
       "#login", "#building_list", "#floor_list", "#direction_list", "#equipment_list", "#room_type", "#room_list", "#conference_list", "#rate_room_type", "#room_rate_list", "#discount_list", "#service_group_list", "#service_group_detail", "#user_group", "#usesr_access", "#shift_list", "#nationality", "#world_city", "#agent_list", "#area_list", "#guest_list", "#confirm_booking", "#purpose_list", "#airline_list", "#source_booking", "#promotion_list", "#billaddress_group", "#payment_type", "#card_type", "#reason_cancel", "#reason_locked", "#reason_maintenance" 
       //Phần 3. Kinh doanh (sale)
       ,"#availability", "#customer", "#reservation", "#room_allotment", "#sales", "#post_ohter_service", "#copy_booking", "#membership"    
@@ -93,15 +92,21 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 
+  function scrollElement(element, marginPercentage) {
+    var offset = element.offsetTop + (element.offsetHeight * marginPercentage / 100);
+    var scrollOffset = offset - (window.innerHeight * marginPercentage / 100);
+    window.scrollTo({ top: scrollOffset, behavior: "smooth" });
+  }
+  
   function createResultContainer(element, selector) {
     var resultContainer = document.createElement("div");
     var dialogContent = document.createElement("div");
     var classToIdMap = {
-      ".search-content-login": "login",
-      ".search-content-building_list": "building_list",
-      ".search-content-room_list": "room_list",
-      ".search-content-rate_room_type": "rate_room_type",
-      ".search-content-room_rate_list": "room_rate_list"
+      "login": "login",
+      "building_list": "building_list",
+      "room_list": "room_list",
+      "rate_room_type": "rate_room_type",
+      "room_rate_list": "room_rate_list"
     };
     var id = classToIdMap[selector];
     var targetElement = null;
@@ -114,24 +119,14 @@ document.addEventListener("DOMContentLoaded", function() {
       dialogContent.appendChild(targetElement.cloneNode(true));
       resultContainer.appendChild(dialogContent);
       resultContainer.addEventListener("click", function() {
-        scrollToElement(targetElement);
+        scrollElement(targetElement, 15); //margin-top từ màn hình khi scroll
       });
     }
-    // Kiểm tra và loại bỏ các kết quả trùng lặp
-    var resultContainers = searchResults.querySelectorAll('.result-container');
-    var idSet = new Set();
-    resultContainers.forEach(function(container) {
-      var containerId = container.querySelector('[id]').getAttribute('id');
-      idSet.add(containerId);
-    });
-    if (id && idSet.has(id) && id !== "building_list" && id !== "room_rate_list") {
-      console.log('123');
-      return null; // Trả về null nếu id đã tồn tại trong tập hợp (trừ id "building_list" và "room_rate_list")
-    }
-        resultContainer.classList.add('result-container');
+    resultContainer.classList.add('result-container');
     return resultContainer;
-  }
-      // highlight
+  }     
+
+  // highlight
   function highlightMatchedElement(element, query) {
     var regex = new RegExp("(" + query + ")", "gi");
     var content = element.textContent;
@@ -151,8 +146,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // End 
 
-  function scrollToElement(element) {
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
 });
 
