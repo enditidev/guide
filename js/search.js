@@ -1,17 +1,7 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var searchInput = document.getElementById("search-input");
-  var searchResults = document.getElementById("search-results");
-  var maxResults = 9;
-
-  searchInput.addEventListener("keyup", function() {
-    reset(); //reset id 
-    var query = searchInput.value.toLowerCase();
-    if (query.length === 0) {
-      clearSearchResults();
-      return;
-    }
-    clearSearchResults();
-
+  document.addEventListener("DOMContentLoaded", function() {
+    var searchInput = document.getElementById("search-input");
+    var searchResults = document.getElementById("search-results");
+    var maxResults = 9;
     const selectors = [
       //Phần 2. Danh mục (file)
       "#login", "#building_list", "#floor_list", "#direction_list", "#equipment_list", "#room_type", "#room_list", "#conference_list", "#rate_room_type", "#room_rate_list", "#discount_list", "#service_group_list", "#service_group_detail", "#user_group", "#usesr_access", "#shift_list", "#nationality", "#world_city", "#agent_list", "#area_list", "#guest_list", "#confirm_booking", "#purpose_list", "#airline_list", "#source_booking", "#promotion_list", "#billaddress_group", "#payment_type", "#card_type", "#reason_cancel", "#reason_locked", "#reason_maintenance" 
@@ -30,121 +20,147 @@ document.addEventListener("DOMContentLoaded", function() {
       //Phần 9. Hướng dẫn tạo thẻ ăn sáng
       ,"#breakfast"
     ];
+    searchInput.addEventListener("keyup", function() {
+      reset(); //reset id 
+      var query = searchInput.value.toLowerCase();
 
-    var foundResults = 0;
-
-    selectors.forEach(function(selector) {
-      var elements = document.querySelectorAll(selector);
-  
-      elements.forEach(function(element) {
-        var content = element.textContent.toLowerCase();
-  
-        if (content.includes(query) && foundResults < maxResults) {
-          highlightMatchedElement(element, query);
-          var resultContainer = createResultContainer(element, selector);
-          searchResults.appendChild(resultContainer);
-          foundResults++;
-        }
-      });
-    });
-  
-    if (!foundResults) {
-      clearSearchResults();
-      let noResultsMessage = document.createElement("p");
-      noResultsMessage.textContent = "Không tìm thấy kết quả";
-      noResultsMessage.classList.add("can-not-find");
-      searchResults.appendChild(noResultsMessage);
-    } else {
-      if (foundResults < maxResults) {
-      } else {
-        var showMoreText = document.createElement("div");
-        showMoreText.textContent = "Hiển thị thêm";
-        showMoreText.classList.add("show-more-text");
-        searchResults.appendChild(showMoreText);
+      if (query.length == 0) {
+        selectors.forEach(function(selector) {
+          var elements = document.querySelectorAll(selector);
+      
+          elements.forEach(function(element) {
+            clearHighlight(element);
+        });
+        });
+        
+        return;
       }
-    }
-  
-    showMoreText.addEventListener("click", function() {
       clearSearchResults();
-  
+
+      
+
+      var foundResults = 0;
+
       selectors.forEach(function(selector) {
         var elements = document.querySelectorAll(selector);
-  
+    
         elements.forEach(function(element) {
+          clearHighlight(element);
           var content = element.textContent.toLowerCase();
-  
-          if (content.includes(query)) {
+          if (content.includes(query) && foundResults < maxResults) {
             highlightMatchedElement(element, query);
             var resultContainer = createResultContainer(element, selector);
             searchResults.appendChild(resultContainer);
+            foundResults++;
           }
         });
       });
-  
-    });
-  });
-    function reset() {
-    clearSearchResults();
-  }
-
-  function clearSearchResults() {
-    searchResults.innerHTML = "";
-  }
-
-
-  function scrollElement(element, marginPercentage) {
-    var offset = element.offsetTop + (element.offsetHeight * marginPercentage / 100);
-    var scrollOffset = offset - (window.innerHeight * marginPercentage / 100);
-    window.scrollTo({ top: scrollOffset, behavior: "smooth" });
-  }
-  
-  function createResultContainer(element, selector) {
-    var resultContainer = document.createElement("div");
-    var dialogContent = document.createElement("div");
-    var classToIdMap = {
-      "login": "login",
-      "building_list": "building_list",
-      "room_list": "room_list",
-      "rate_room_type": "rate_room_type",
-      "room_rate_list": "room_rate_list"
-    };
-    var id = classToIdMap[selector];
-    var targetElement = null;
-    if (id) {
-      targetElement = document.getElementById(id);
-    } else {
-      targetElement = element;
-    }
-    if (targetElement) {
-      dialogContent.appendChild(targetElement.cloneNode(true));
-      resultContainer.appendChild(dialogContent);
-      resultContainer.addEventListener("click", function() {
-        scrollElement(targetElement, 15); //margin-top từ màn hình khi scroll
-      });
-    }
-    resultContainer.classList.add('result-container');
-    return resultContainer;
-  }     
-
-  // highlight
-  function highlightMatchedElement(element, query) {
-    var regex = new RegExp("(" + query + ")", "gi");
-    var content = element.textContent;
-    var matchFound = false;
-  
-    var highlightedContent = content.replace(regex, function(match, p1) {
-      if (searchInput ===''){
+    
+      if (!foundResults) {
         clearSearchResults();
+        let noResultsMessage = document.createElement("p");
+        noResultsMessage.textContent = "Không tìm thấy kết quả";
+        noResultsMessage.classList.add("can-not-find");
+        searchResults.appendChild(noResultsMessage);
+      } else {
+        if (foundResults < maxResults) {
+        } else {
+          var showMoreText = document.createElement("div");
+          showMoreText.textContent = "Hiển thị thêm";
+          showMoreText.classList.add("show-more-text");
+          searchResults.appendChild(showMoreText);
+        }
       }
-      matchFound = true;
-      return '<span class="highlight">' + p1 + '</span>';
+    
+      showMoreText.addEventListener("click", function() {
+        clearSearchResults();
+    
+        selectors.forEach(function(selector) {
+          var elements = document.querySelectorAll(selector);
+    
+          elements.forEach(function(element) {
+            clearHighlight(element);
+            var content = element.textContent.toLowerCase();
+            if (content.includes(query)) {
+              highlightMatchedElement(element, query);
+              var resultContainer = createResultContainer(element, selector);
+              searchResults.appendChild(resultContainer);
+            }
+          });
+        });
+    
+      });
     });
-    element.innerHTML = highlightedContent;
-    element.classList.toggle("highlighted", matchFound);
-  }  
-      // End highlight
+      function reset() {
+      clearSearchResults();
+    }
 
-  // End 
+    function clearSearchResults() {
+      searchResults.innerHTML = "";
+    }
 
-});
+    function clearHighlight(element) {
+      var highlightSpans = element.querySelectorAll("span.highlight");
+      for (var i = 0; i < highlightSpans.length; i++) {
+        var span = highlightSpans[i];
+        var parent = span.parentNode;
+        parent.replaceChild(document.createTextNode(span.textContent), span);
+      }
+      element.classList.remove("highlighted");
+    }
+
+    function scrollElement(element, marginPercentage) {
+      var offset = element.offsetTop + (element.offsetHeight * marginPercentage / 100);
+      var scrollOffset = offset - (window.innerHeight * marginPercentage / 100);
+      window.scrollTo({ top: scrollOffset, behavior: "smooth" });
+    }
+    
+    function createResultContainer(element, selector) {
+      var resultContainer = document.createElement("div");
+      var dialogContent = document.createElement("div");
+      var classToIdMap = {
+        "login": "login",
+        "building_list": "building_list",
+        "room_list": "room_list",
+        "rate_room_type": "rate_room_type",
+        "room_rate_list": "room_rate_list"
+      };
+      var id = classToIdMap[selector];
+      var targetElement = null;
+      if (id) {
+        targetElement = document.getElementById(id);
+      } else {
+        targetElement = element;
+      }
+      if (targetElement) {
+        dialogContent.appendChild(targetElement.cloneNode(true));
+        resultContainer.appendChild(dialogContent);
+        resultContainer.addEventListener("click", function() {
+          scrollElement(targetElement, 15); //margin-top từ màn hình khi scroll
+        });
+      }
+      resultContainer.classList.add('result-container');
+      return resultContainer;
+    }     
+
+    // highlight
+    function highlightMatchedElement(element, query) {
+      var regex = new RegExp("(" + query + ")", "gi");
+      var content = element.textContent;
+      var matchFound = false;
+      var highlightedContent = content.replace(regex, function(match, p1) {
+        if (searchInput ===''){
+          clearSearchResults();
+        }
+        matchFound = true;
+        return '<span class="highlight">' + p1 + '</span>';
+      });
+      element.innerHTML = highlightedContent;
+      element.classList.toggle("highlighted", matchFound);
+    }  
+        // End highlight
+
+    // End 
+
+  });
 
