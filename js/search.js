@@ -4,6 +4,7 @@
     var maxResults = 9;
     const selectors = [
       //Phần 2. Danh mục (file)
+      ".search-content-login",".search-content-building_list", ".search-content-room_list",".search-content-rate_room_type", ".search-content-room_rate_list",
       "#login", "#building_list", "#floor_list", "#direction_list", "#equipment_list", "#room_type", "#room_list", "#conference_list", "#rate_room_type", "#room_rate_list", "#discount_list", "#service_group_list", "#service_group_detail", "#user_group", "#usesr_access", "#shift_list", "#nationality", "#world_city", "#agent_list", "#area_list", "#guest_list", "#confirm_booking", "#purpose_list", "#airline_list", "#source_booking", "#promotion_list", "#billaddress_group", "#payment_type", "#card_type", "#reason_cancel", "#reason_locked", "#reason_maintenance" 
       //Phần 3. Kinh doanh (sale)
       ,"#availability", "#customer", "#reservation", "#room_allotment", "#sales", "#post_ohter_service", "#copy_booking", "#membership"    
@@ -119,11 +120,11 @@
       var resultContainer = document.createElement("div");
       var dialogContent = document.createElement("div");
       var classToIdMap = {
-        "login": "login",
-        "building_list": "building_list",
-        "room_list": "room_list",
-        "rate_room_type": "rate_room_type",
-        "room_rate_list": "room_rate_list"
+        ".search-content-login": "login",
+        ".search-content-building_list": "building_list",
+        ".search-content-room_list": "room_list",
+        ".search-content-rate_room_type": "rate_room_type",
+        ".search-content-room_rate_list": "room_rate_list"
       };
       var id = classToIdMap[selector];
       var targetElement = null;
