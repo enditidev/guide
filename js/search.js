@@ -67,6 +67,7 @@
         });
       });
     
+      var showMoreText = document.createElement("div");
       if (!foundResults) {
         clearSearchResults();
         let noResultsMessage = document.createElement("p");
@@ -76,7 +77,6 @@
       } else {
         if (foundResults < maxResults) {
         } else {
-          var showMoreText = document.createElement("div");
           showMoreText.textContent = "Hiển thị thêm";
           showMoreText.classList.add("show-more-text");
           searchResults.appendChild(showMoreText);
