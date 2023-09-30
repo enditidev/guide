@@ -1,3 +1,13 @@
+  document.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      var searchInput = document.getElementById("search-input");
+      if (searchInput === document.activeElement) {
+        //khi nhấn enter và focus input search sẽ chạy vào đây chặn enter
+        event.preventDefault();
+      }
+    }
+  });
+  
   document.addEventListener("DOMContentLoaded", function() {
     var searchInput = document.getElementById("search-input");
     var searchResults = document.getElementById("search-results");
