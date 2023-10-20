@@ -8,7 +8,6 @@ searchInput.addEventListener('input', function() {
   
   // Xóa highlight của các phần tử đã được highlight trước đó
   clearHighlight();
-
   if (searchTerm.trim() !== '') {
     // Lấy tất cả các phần tử mà bạn muốn tìm kiếm
     const elementsToSearch = document.querySelectorAll('p, div, span, ul, li');

@@ -33,8 +33,15 @@ function highlightWord(node, word, doc, resultContainer) {
     var tempWordVal = stripVowelAccent(word.toLowerCase());
     var nodeValue = node.nodeValue;
 
+    var wordIndices = [];
     var wordIndex = tempNodeVal.indexOf(tempWordVal);
     while (wordIndex !== -1) {
+      wordIndices.push(wordIndex);
+      wordIndex = tempNodeVal.indexOf(tempWordVal, wordIndex + 1);
+    }
+
+    for (var i = wordIndices.length - 1; i >= 0; i--) {
+      wordIndex = wordIndices[i];
       var pn = node.parentNode;
       if (pn.className !== "searchword") {
         // Split the text node at the word position
@@ -52,12 +59,6 @@ function highlightWord(node, word, doc, resultContainer) {
         // Update the node and word values for the next iteration
         node = after;
         tempNodeVal = stripVowelAccent(node.textContent.toLowerCase());
-        wordIndex = tempNodeVal.indexOf(tempWordVal);
-      } else {
-        // Skip if the node is already highlighted
-        node = node.nextSibling;
-        tempNodeVal = stripVowelAccent(node.textContent.toLowerCase());
-        wordIndex = tempNodeVal.indexOf(tempWordVal);
       }
     }
   }
