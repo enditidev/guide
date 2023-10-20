@@ -40,12 +40,13 @@ function highlightWord(node, word, doc, resultContainer) {
       wordIndex = tempNodeVal.indexOf(tempWordVal, wordIndex + 1);
     }
 
-    for (var i = wordIndices.length - 1; i >= 0; i--) {
+    var offset = 0;
+    for (var i = 0; i < wordIndices.length; i++) {
       wordIndex = wordIndices[i];
       var pn = node.parentNode;
       if (pn.className !== "searchword") {
         // Split the text node at the word position
-        var before = node.splitText(wordIndex);
+        var before = node.splitText(wordIndex + offset);
         var after = before.splitText(word.length);
 
         // Create the highlighted span node
@@ -59,6 +60,9 @@ function highlightWord(node, word, doc, resultContainer) {
         // Update the node and word values for the next iteration
         node = after;
         tempNodeVal = stripVowelAccent(node.textContent.toLowerCase());
+
+        // Adjust the offset to account for the added span nodes
+        offset += word.length - 1;
       }
     }
   }
@@ -71,9 +75,9 @@ function unhighlight(node) {
     }
   }
 
-  if (node.nodeType == Node.TEXT_NODE) {
+  if (node.nodeType === Node.TEXT_NODE) {
     var pn = node.parentNode;
-    if (pn.className == "searchword") {
+    if (pn.className === "searchword") {
       var prevSib = pn.previousSibling;
       var nextSib = pn.nextSibling;
       nextSib.textContent = prevSib.textContent + node.textContent + nextSib.textContent;
@@ -84,29 +88,21 @@ function unhighlight(node) {
 }
 
 function localSearchHighlight(searchStr, doc) {
-  doc = typeof (doc) != 'undefined' ? doc : document;
+  doc = typeof doc !== 'undefined' ? doc : document;
 
   if (!doc.createElement) return;
-  if (searchStr == '') return;
+  if (searchStr === '') {
+    unhighlight(doc.body); // Bỏ highlight nếu search-input rỗng
+    return;
+  }
 
   var searchstr = unescape(searchStr).replace(/^\s+|\s+$/g, "");
-  if (searchstr == '') return;
+  if (searchstr === '') return;
 
-  var phrases = searchstr.replace(/\+/g, ' ').split(/\"/);
   var bodyElement = doc.getElementsByTagName("body")[0]; // Cache the body element
+  unhighlight(bodyElement); // Bỏ highlight tìm kiếm trước đó
 
-  for (var p = 0; p < phrases.length; p++) {
-    var phrase = unescape(phrases[p]).replace(/^\s+|\s+$/g, "");
-    if (phrase == '') continue;
-
-    var words = (p % 2 == 0) ? phrase.replace(/([+,()]|%(29|28)|\W+(AND|OR)\W+)/g, ' ').split(/\s+/) : [phrase];
-
-    for (var w = 0; w < words.length; w++) {
-      var word = words[w];
-      if (word == '') continue;
-      highlightWord(bodyElement, word, doc);
-    }
-  }
+  highlightWord(bodyElement, searchstr, doc);
 }
 
 var searchTimeout;
@@ -115,11 +111,8 @@ function handleSearchInput(value) {
   clearTimeout(searchTimeout);
 
   const searchStr = stripVowelAccent(value.trim());
-  unhighlight(document.getElementsByTagName('body')[0]); // Bỏhighlight
 
-  if (searchStr !== '') {
-    searchTimeout = setTimeout(function() {
-      localSearchHighlight(searchStr);
-    }, 400); // thời gian delay highlight để bớt lag
-  }
+  searchTimeout = setTimeout(function() {
+    localSearchHighlight(searchStr);
+  }, 400); // Thời gian chờ để highlight (giảm độ trễ)
 }
