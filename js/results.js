@@ -12,7 +12,7 @@
            searchResults.style.display = 'block';
            searchInput.style.borderRadius = '20px 20px 0 0';
            searchInput.style.background = 'white';
-           searchInput.style.borderBottom = '1px solid grey';
+           searchInput.style.borderBottom = 'none';
            searchInput.style.borderTop = '1px solid grey';
            searchInput.style.borderLeft = '1px solid grey';
            searchInput.style.borderRight = '1px solid grey';
@@ -51,14 +51,12 @@ document.addEventListener("click", function(event) {
     if (event.target !== searchInput && event.target !== searchResults) {
         searchResults.style.display = 'none';
         searchInput.style.borderRadius = '';
-        searchInput.style.borderBottom = '1px solid grey';
         searchResults.style.borderTop = 'none';
     }
     else{
         if (searchInput.value.trim() !== ''){
             searchResults.style.display = 'block';
             searchInput.style.borderRadius = '20px 20px 0 0';
-            searchInput.style.borderBottom = '1px solid grey';
             searchResults.style.borderTop = 'none';
         }  
     }
