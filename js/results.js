@@ -51,12 +51,14 @@ document.addEventListener("click", function(event) {
     if (event.target !== searchInput && event.target !== searchResults) {
         searchResults.style.display = 'none';
         searchInput.style.borderRadius = '';
+        searchInput.style.borderBottom = '';
         searchResults.style.borderTop = 'none';
     }
     else{
         if (searchInput.value.trim() !== ''){
             searchResults.style.display = 'block';
             searchInput.style.borderRadius = '20px 20px 0 0';
+            searchInput.style.borderBottom = 'none';
             searchResults.style.borderTop = 'none';
         }  
     }
