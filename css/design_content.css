@@ -1,6 +1,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 18px; 
+    /* width: 90%; */
 } 
 h2{
     color:red;
@@ -42,7 +43,7 @@ tr:last-child th {
 }
 tbody{
     background-color:#F8CCCC ;
-    width: 100%;
+    width: 90%;
     height: 0;
 }
 tbody td{
@@ -60,13 +61,12 @@ thead{
     justify-content: center;
     align-items: center;
 }
-div + div {
+/* div + div {
     margin-top: 54px;
-}
-.image-border {
+} */
+/* .image-border {
     border: 15px solid #BFE3BF;
-
-}
+} */
 .align{
     padding-left: 20px;
     padding-right: 20px;
