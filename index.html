@@ -14,11 +14,15 @@
     <link href="./css/moving.css" rel="stylesheet" >
     <link href="./css/onTop_onBottom.css" rel="stylesheet" >
     <script src="./js/menu.js"></script>
-    <script src="./js/search.js"></script>
+    <script src="./js/search02.js"></script>
     <script src="./js/moving.js"></script>
     <script src="./js/search_display.js"></script>
     <script src="./js/results.js"></script>
     <script src="./js/onTop_onBottom.js"></script>
+    <script src="./js/highlight02.js"></script>
+    <!-- <script src="./js/highlight03.js"></script> -->
+
+
 </head>
 <body>
     <div class="no-spacing">
@@ -49,7 +53,8 @@
                 <form>
                   <div class="inner-form">
                     <div class="input-field">
-                      <input id="search-input" type="text" placeholder="Ctrl + F, please" />
+                      <input id="search-input" type="text" onkeyup="handleSearchInput(this.value);"
+                       placeholder="Ctrl + F, please" />
                       <span>
                         <button id="search-button" class="icon-button">
                             <img src="./wrapcontent/image/icon_glass.svg">
@@ -139,6 +144,10 @@ div + div {
     margin-top: 0;
   }
 
+  span.searchword { background-color: yellow; }
+.highlight{
+    background-color: yellow;
+}
 </style>
 </body>
 </html>

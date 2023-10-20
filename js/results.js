@@ -1,8 +1,9 @@
  document.addEventListener("DOMContentLoaded", function() {
        const searchInput = document.getElementById('search-input');
        const searchResults = document.getElementById('search-results');
-       searchResults.style.borderBottom = '1px solid black';
-       searchResults.style.borderLeft = '1px solid black';
+       
+       searchResults.style.borderBottom = 'none';
+       searchResults.style.borderLeft = 'none';
        searchResults.style.borderRight = '1px solid black';
 
 
@@ -13,6 +14,8 @@
            searchInput.style.background = 'white';
            searchInput.style.borderBottom = 'none';
            searchInput.style.borderTop = '1px solid grey';
+           searchInput.style.borderLeft = '1px solid grey';
+           searchInput.style.borderRight = '1px solid grey';
            searchResults.style.borderLeft = '1px solid grey';
            searchResults.style.borderRight = '1px solid grey';
            searchResults.style.borderBottom = '1px solid grey';
@@ -23,6 +26,8 @@
            searchResults.style.display = 'none';
            searchInput.style.borderRadius = '';
            searchInput.style.borderBottom = '';
+           searchInput.style.boxShadow = 'none';
+           searchResults.style.boxShadow = 'none';
          }
        });
 
@@ -37,6 +42,7 @@
        // End Chữ tự động mất khi chuẩn bị nhâp tìm kiếm 
     });
 
+    // hàm nhấn màn hình ẩn khung tìm kiếm
 document.addEventListener("click", function(event) {
   const searchInput = document.getElementById("search-input");
   const searchResults = document.getElementById("search-results");
@@ -46,7 +52,7 @@ document.addEventListener("click", function(event) {
         searchResults.style.display = 'none';
         searchInput.style.borderRadius = '';
         searchInput.style.borderBottom = '';
-        searchResults.style.borderTop = '';
+        searchResults.style.borderTop = 'none';
     }
     else{
         if (searchInput.value.trim() !== ''){

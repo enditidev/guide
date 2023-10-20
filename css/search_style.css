@@ -49,16 +49,13 @@
 }
 
 .search-icon {
-    color: #888;
+    color: black;
     padding: 5px;
 }
 
 .spacer {
     flex-grow: 1;
 }
-.highlight {
-    background-color: yellow;
-  }
   
   .search-result {
     margin-bottom: 10px;
@@ -109,7 +106,7 @@
     border: 1px solid black;
     border-radius: 100px;
     display: block;
-    color: black; 
+    color: black;
     transition: all .2s ease-out, color .2s ease-out;
     margin-top: 8%; /*khoảng cách ô tìm kiếm với slogan */
     padding-right: 60px;
@@ -247,5 +244,11 @@
   .can-not-find{ /* từ "không tìm thấy kết quả" trong kết quả tìm kiếm */
     text-align: center;
     font: bold;
+  }
+  .highlighted{
+    background-color: yellow;
+  }
+  .highlight{
+    background-color: yellow;
   }
 /* End Show Result */
