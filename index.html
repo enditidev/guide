@@ -29,77 +29,72 @@
 </head>
 <body>
     <div class="no-spacing">
-    <div class="slogan">
-        <span style="color:white; margin-left: 5%;">BẠN MUA SỰ TIỆN LỢI, CHÚNG TÔI BÁN SỰ HÀI LÒNG</span>
-        <span style="padding-left: 200px;">
-            <a href="https://vietasoft.com.vn/chatviber"><i class="fab fa-viber" style="font-size: 19px;"></i></a>
-            <span><a href="https://vietasoft.com.vn/chatviber">Chat Viber</a></span>
-        </span>
-        <span style="padding-left: 50px;">
-            <a href="http://m.me/GiHoTech"><i class="fab fa-facebook-messenger" style="font-size: 19px;"></i></a>
-            <span><a href="http://m.me/GiHoTech">Chat Messenger</a></span>
-        </span>
-        <span style="padding-left: 50px;">
-            <a href="tel:0902530968"><i class="fab fa-whatsapp" style="font-size: 19px;"></i></a>
-            <span><a href="tel:0902530968">Call</a></span>
-        </span>
-    </div>
+        <div class="slogan">
+            <div class="text-container">
+                <span style="color:white;">BẠN MUA SỰ TIỆN LỢI, CHÚNG TÔI BÁN SỰ HÀI LÒNG</span>
+            </div>
+            <div class="button-container">
+                <a style="padding-left: 50px;" href="https://vietasoft.com.vn/chatviber"><i class="fab fa-viber" style="font-size: 19px;"> Chat Viber</i></a>
+                <a style="padding-left: 50px;" href="http://m.me/GiHoTech"><i class="fab fa-facebook-messenger" style="font-size: 19px;"> Chat Messenger</i></a>
+                <a style="padding-left: 50px;" href="tel:0902530968"><i class="fab fa-whatsapp" style="font-size: 19px;"> Call</i></a>
+            </div>
+        </div>
     </div>
 
      <!-- menu -->
-     <div clas="no-spacing">
+     <div class="no-spacing">
         <div class="header">
             <div class="logo">
                 <img width="200" height="50" src="./wrapcontent/image/logo.png" />
             </div>
             <div class="s129">
                 <form>
-                  <div class="inner-form">
-                    <div class="input-field">
-                      <input id="search-input" type="text" onkeyup="handleSearchInput(this.value);"
-                       placeholder="Ctrl + F, please" />
-                      <span>
-                        <button id="search-button" class="icon-button">
-                            <img src="./wrapcontent/image/icon_glass.svg">
-                        </button>
-                      </span>
-                      <div class="container-show-results">
-                        <div class="show-results" id="search-results"></div>
-                      </div>
+                    <div class="inner-form">
+                        <div class="input-field">
+                            <input id="search-input" type="text" onkeyup="handleSearchInput(this.value);"
+                                placeholder="Ctrl + F, please" />
+                            <span>
+                                <button id="search-button" class="icon-button">
+                                    <img src="./wrapcontent/image/icon_glass.svg">
+                                </button>
+                            </span>
+                            <div class="container-show-results">
+                                <div class="show-results" id="search-results"></div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </form>
-              </div>            
-            <div class="space-search-menu">
-            <div class="menu-container" onclick="myFunction(this),toggleGuide('menu-details', 'menu-details-summary')">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-                <div id="menu-details" style="display: none;">
-                  <ul>
-                    <li>
-                        <a href="http://guide.gihotech.vn/posm">
-                            PHẦN MỀM QUẢN LÝ BÁN HÀNG CHUYÊN NGHIỆP - POSM
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://guide.gihotech.vn/bos">
-                            PHẦN MỀM QUẢN LÝ TÀI CHÍNH KẾ TOÁN - BOS        
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://guide.gihotech.vn/pur">
-                            PHẦN MỀM QUẢN LÝ MUA HÀNG - PUR
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://guide.gihotech.vn/hrm">
-                            PHẦN MỀM QUẢN LÝ NHÂN SỰ - HRM
-                        </a>
-                    </li>
-                  </ul>
-                </div>
             </div>
+            <div class="space-search-menu">
+                <div class="menu-container" onclick="myFunction(this),toggleGuide('menu-details', 'menu-details-summary')">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div id="menu-details" style="display: none;">
+                        <ul>
+                            <li>
+                                <a href="http://guide.gihotech.vn/posm">
+                                    PHẦN MỀM QUẢN LÝ BÁN HÀNG CHUYÊN NGHIỆP - POSM
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guide.gihotech.vn/bos">
+                                    PHẦN MỀM QUẢN LÝ TÀI CHÍNH KẾ TOÁN - BOS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guide.gihotech.vn/pur">
+                                    PHẦN MỀM QUẢN LÝ MUA HÀNG - PUR
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://guide.gihotech.vn/hrm">
+                                    PHẦN MỀM QUẢN LÝ NHÂN SỰ - HRM
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -151,6 +146,40 @@ div + div {
 .highlight{
     background-color: yellow;
 }
+</style>
+
+<style>
+    /* CSS hiện tại */
+    @media (max-width: 600px) {
+        .logo {
+            display: none;
+        }
+
+        .s129 {
+            margin-top: 10px;
+        }
+
+        .s129 form .inner-form .input-field input {
+            width: 300px;
+        }
+
+        .container-show-results {
+            width: 300px;
+            max-height: 450px;
+        }
+
+        .menu-container {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    /* CSS mới được thêm vào */
+    @media (min-width: 601px) {
+        .menu-container {
+            position: static;
+        }
+    }
 </style>
 </body>
 </html>
