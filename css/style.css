@@ -84,6 +84,10 @@
     gap: 10px;
 }
 
+.max-width-image {
+    max-width: 900px;
+  }
+
 @media (max-width: 600px) {
     .slogan {
         flex-direction: column;
@@ -93,5 +97,9 @@
     .button-container {
         margin-left: 0;
         margin-top: 10px;
+    }
+
+    .max-width-image {
+        max-width: 350px;
     }
 }
